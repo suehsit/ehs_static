@@ -461,7 +461,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 								// This chapter has at least 1 section; begin building the section links
 								item.sections.forEach(function(item, i) {
 									var currentSection = '',
-										slug = window.location.pathname + '/' + item.slug;
+										slug = window.location.pathname.replace(/\/+$/, '').replace(/\.html$/, '').split('/').pop()
+													+ '/' + item.slug + '.html'; // static archive: sections live in a directory named after this page
 
 									currentSection = updateTemplate(sectionTemplate, {"sectionNumber" : chapterNumber + '.' + (i+1), "sectionTitle" : item.title, "slug" : slug});
 

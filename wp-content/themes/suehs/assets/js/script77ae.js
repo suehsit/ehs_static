@@ -156,7 +156,11 @@ function getTopicIcon(imageUrl, category) {
  * @param {String} category The category name to return an icon for
  */
 function getTopicUrl(category) {
-	var url = '/topic/';
+	// Static archive: paths are relative and carry the .html extension, matching
+	// the rest of the mirror. Only root-level landing pages call this function
+	// (topic, training, manual, services, forms-tools, news, learning-library,
+	// reference), so a path relative to the archive root is correct.
+	var url = 'topic/';
 	switch (category) {
 		case 'animal safety':
 			url += 'animal-safety';
@@ -171,7 +175,7 @@ function getTopicUrl(category) {
 			url += 'chemical-safety';
 			break;
 		case 'communications':
-			url = '/about-us/training-communications';
+			url = 'about-us/training-communications.html';
 			break;
 		case 'construction and maintenance':
 			url += 'construction-maintenance';
@@ -204,7 +208,9 @@ function getTopicUrl(category) {
 			url += 'hazardous-materials';
 			break;
 		case 'health and wellness':
-			url += 'health-wellness';
+			// /topic/health-wellness was not captured by the crawl (the directory
+			// exists but is empty). Fall back to the topics index rather than 404.
+			url = 'topic.html';
 			break;
 		case 'lab safety':
 			url += 'lab-safety';
@@ -216,7 +222,7 @@ function getTopicUrl(category) {
 			url += 'laser-safety';
 			break;
 		case 'marketing':
-			url = '/about-us/training-communications';
+			url = 'about-us/training-communications.html';
 			break;
 		case 'occupational injury and illness':
 			url += 'occupational-injury-illness';
@@ -231,11 +237,15 @@ function getTopicUrl(category) {
 			url += 'waste-disposal';
 			break;
 		case 'weather conditions':
-			url += 'weather-conditions';
+			// /topic/weather-conditions was not captured by the crawl.
+			// Fall back to the topics index rather than 404.
+			url = 'topic.html';
 			break;
 		default:
-			// Guess at what the url may be
-			url += category.toLowerCase().replace(/ /g, '-');
+			// Unknown or retired topic tag (e.g. "SLAC"). The archive is frozen,
+			// so guessing a slug can only produce a 404; send the visitor to the
+			// topics index instead.
+			url = 'topic.html';
 
 			// Shouldn't be here...try sending the current URL to Raygun to help debug
 			try {
@@ -246,6 +256,11 @@ function getTopicUrl(category) {
 				} catch(err) { };
 			};
 	};
+
+	// Cases that append a slug still need the extension; cases that assign a
+	// complete path above already carry it.
+	if (!/\.html$/.test(url))
+		url += '.html';
 
 	return url;
 };
