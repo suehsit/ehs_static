@@ -1,0 +1,993 @@
+	<!doctype html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]},feature_flags:["soft_nav"]};(window.NREUM||(NREUM={})).loader_config={licenseKey:"820859c140",applicationID:"93672174",browserID:"94030159"};;/*! For license information please see nr-loader-rum-1.320.1.min.js.LICENSE.txt */
+(()=>{var e={8122(e,t,r){"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),s=0===Object.keys(r).length?e:r;for(let a in s)if(void 0!==e[a])try{if(null===e[a]){r[a]=null;continue}Array.isArray(e[a])&&Array.isArray(t[a])?r[a]=Array.from(new Set([...e[a],...t[a]])):e[a]instanceof Map||e[a]instanceof Set||e[a]instanceof Date||e[a]instanceof RegExp?r[a]=e[a]:"object"==typeof e[a]&&null!==t[a]&&"object"==typeof t[a]?r[a]=i(e[a],t[a]):r[a]=e[a]}catch(e){r[a]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},2555(e,t,r){"use strict";r.d(t,{f:()=>a});var n=r(384),i=r(8122);const s={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function a(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}r.d(t,["D",0,e=>(0,i.a)(e,s)])},7699(e,t,r){"use strict";var n=r(860);const i={[n.K7.logging]:!0,[n.K7.genericEvents]:!0,[n.K7.jserrors]:!0,[n.K7.ajax]:!0};r.d(t,["It",0,1e6,"KC",0,i,"qh",0,"SESSION_ERROR"])},9324(e,t,r){"use strict";r.d(t,["xv",0,"1.320.1"])},981(e,t,r){"use strict";r.d(t,["R",0,{AJAX:"AjaxRequest",PA:"PageAction",UA:"UserAction",BP:"BrowserPerformance",WS:"WebSocket",SPV:"SecurityPolicyViolation",JSE:"JavaScriptError",LOG:"Log",PVE:"PageView",PVT:"PageViewTiming",SR:"SessionReplay",ST:"SessionTrace",BI:"BrowserInteraction"}])},6154(e,t,r){"use strict";var n=r(1863);const i="undefined"!=typeof window&&!!window.document,s="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),a=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),o=Boolean("hidden"===a?.document?.visibilityState),c=""+a?.location,u=/iPad|iPhone|iPod/.test(a.navigator?.userAgent),d=u&&"undefined"==typeof SharedWorker,l=((()=>{const e=a.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)());r.d(t,["OF",0,u,"RI",0,i,"WN",0,l,"bv",0,s,"gm",0,a,"m",0,c,"mw",0,o,"sb",0,d,"zk",0,()=>{const e=a?.performance?.getEntriesByType?.("navigation")?.[0];if(e&&e.responseStart>0&&e.responseStart<a.performance.now())return e}])},3241(e,t,r){"use strict";r.d(t,{W:()=>i});var n=r(6154);function i(e={}){try{n.gm.dispatchEvent(new CustomEvent("newrelic",{detail:e}))}catch(e){}}},1687(e,t,r){"use strict";r.d(t,{Ak:()=>o,Ze:()=>u,x3:()=>c});var n=r(3241),i=r(3606),s=r(860),a=r(2646);function o(e,t){if(!e)return;const r={staged:!1,priority:s.P3[t]||0};e.runtime.drainRegistry.get(t)||e.runtime.drainRegistry.set(t,r)}function c(e,t){if(!e)return;const r=e.runtime.drainRegistry;r&&(r.get(t)&&r.delete(t),l(e,t,!1),r.size&&d(e))}function u(e,t="feature",r=!1){if(e){if(!e.runtime.drainRegistry.get(t)||r)return l(e,t);e.runtime.drainRegistry.get(t).staged=!0,d(e)}}function d(e){if(!e)return;const t=Array.from(e.runtime.drainRegistry);t.every(([e,t])=>t.staged)&&(t.sort((e,t)=>e[1].priority-t[1].priority),t.forEach(([t])=>{e.runtime.drainRegistry.delete(t),l(e,t)}))}function l(e,t,r=!0){if(!e)return;const s=e.ee,o=i.i.handlers;if(s&&!s.aborted&&s.backlog&&o){if((0,n.W)({type:"lifecycle",name:"drain",feature:t}),r){const e=s.backlog[t],r=o[t];if(r){for(let t=0;e&&t<e.length;++t)f(e[t],r);Object.entries(r).forEach(([e,t])=>{Object.values(t||{}).forEach(t=>{t[0]?.on&&t[0].context()instanceof a.y&&!t[0].listeners(e).includes(t[1])&&t[0].on(e,t[1])})})}}s.isolatedBacklog||delete o[t],s.backlog[t]=null,s.emit("drain-"+t,[])}}function f(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],s=e[2];n.apply(i,s)}})}},7836(e,t,r){"use strict";var n=r(384),i=r(8990),s=r(2646),a=r(5607);const o="nr@context:".concat(a.W),c=function e(t,r){var n={},a={},d={},l=!1;try{l=16===r.length&&u.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,s){!1!==s&&(s=!0);if(c.aborted&&!i)return;t&&s&&t.emit(e,r,n);var o=g(n);m(e).forEach(e=>{e.apply(o,r)});var u=v()[a[e]];u&&u.push([f,e,r,o]);return o},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach(([e,n])=>{a[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=>{delete f.backlog[e]})},isBuffering:function(e){return!!v()[a[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof s.y?e:e?(0,i.I)(e,o,()=>new s.y(o)):new s.y(o)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return d[t]=d[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),u=(0,n.Zm)();u.ee||(u.ee=c),r.d(t,["P",0,o,"ee",0,c])},2646(e,t,r){"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},9908(e,t,r){"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,s){s?(s.buffer([e],i),s.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}},3606(e,t,r){"use strict";r.d(t,{i:()=>s});var n=r(9908);s.on=a;var i=s.handlers={};function s(e,t,r,s){a(s||n.d,i,e,t,r)}function a(e,t,r,i,s){s||(s="feature"),e||(e=n.d);var a=t[s]=t[s]||{};(a[r]=a[r]||[]).push([e,i])}},3878(e,t,r){"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function s(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>s,jT:()=>n,sp:()=>i})},5607(e,t,r){"use strict";const n=(0,r(9566).bz)();r.d(t,["W",0,n])},9566(e,t,r){"use strict";r.d(t,{LA:()=>a,bz:()=>s});var n=r(6154);function i(e,t){return e?15&e[t]:16*Math.random()|0}function s(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".split("").map(e=>"x"===e?i(t,r++).toString(16):"y"===e?(3&i()|8).toString(16):e).join("")}function a(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,s=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const a=[];for(var o=0;o<e;o++)a.push(i(r,s++).toString(16));return a.join("")}},2614(e,t,r){"use strict";r.d(t,["BB",0,18e5,"Wt",0,"NRBA_SESSION::","iL",0,{SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},"tS",0,{STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},"wk",0,144e5])},1863(e,t,r){"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},944(e,t,r){"use strict";r.d(t,{R:()=>i});var n=r(3241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},8990(e,t,r){"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},6389(e,t,r){"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout(()=>{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=>{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},1910(e,t,r){"use strict";r.d(t,{i:()=>s});var n=r(944);const i=new Map;function s(...e){return e.every(e=>{if(i.has(e))return i.get(e);const t="function"==typeof e?e.toString():"",r=t.includes("[native code]"),s=t.includes("nrWrapper");return r||s||(0,n.R)(64,e?.name||t),i.set(e,r),r})}},5289(e,t,r){"use strict";r.d(t,{GG:()=>a,Qr:()=>c,sB:()=>o});var n=r(3878),i=r(6389);function s(){return"undefined"==typeof document||"complete"===document.readyState}function a(e,t){if(s())return e();const r=(0,i.J)(e),a=setInterval(()=>{s()&&(clearInterval(a),r())},500);(0,n.sp)("load",r,t)}function o(e){if(s())return e();(0,n.DD)("DOMContentLoaded",e)}function c(e){if(s())return e();(0,n.sp)("popstate",e)}},384(e,t,r){"use strict";r.d(t,{Zm:()=>c,bQ:()=>d,dV:()=>u,pV:()=>l});var n=r(6154),i=r(1863),s=r(944),a=r(1910);const o={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function c(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function u(){let e=c();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,a.i)(...Object.values(e.o))),e}function d(e,t){let r=c();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t,2===Object.keys(r.initializedAgents).length&&(0,s.R)(69)}function l(){return function(){let e=c();const t=e.info||{};e.info={beacon:o.beacon,errorBeacon:o.errorBeacon,...t}}(),function(){let e=c();const t=e.init||{};e.init={...t}}(),u(),function(){let e=c();const t=e.loader_config||{};e.loader_config={...t}}(),c()}r.d(t,["NT",0,o])},2843(e,t,r){"use strict";r.d(t,{G:()=>s,u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)},r,i)}function s(e,t,r){(0,n.sp)("pagehide",e,t,r)}},9300(e,t,r){"use strict";r(860).K7.ajax;r.d(t,["mo",0,{NONE:"none",FAILURES:"failures",ALL:"all"}])},3969(e,t,r){"use strict";const n=r(860).K7.metrics;r.d(t,["TZ",0,n,"XG",0,"storeEventMetrics","xV",0,"storeSupportabilityMetrics"])},6630(e,t,r){"use strict";const n=r(860).K7.pageViewEvent;r.d(t,["T",0,n])},782(e,t,r){"use strict";const n=r(860).K7.pageViewTiming;r.d(t,["T",0,n])},4234(e,t,r){"use strict";r.d(t,{W:()=>i});var n=r(1687);class i{constructor(e,t){this.agentRef=e,this.ee=e?.ee,this.featureName=t,this.blocked=!1}deregisterDrain(){(0,n.x3)(this.agentRef,this.featureName)}}},7767(e,t,r){"use strict";var n=r(6154);r.d(t,["V",0,e=>n.RI&&!0===e?.privacy.cookies_enabled])},8362(e,t,r){"use strict";r.d(t,{d:()=>s});var n=r(9566),i=r(1741);class s extends i.W{agentIdentifier=(0,n.LA)(16)}},1741(e,t,r){"use strict";r.d(t,{W:()=>s});var n=r(944),i=r(4261);class s{#e(e,...t){if(this[e]!==s.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e,t=!1){return this.#e(i.Dl,e,t)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e("log",e,t)}start(){return this.#e("start")}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},4261(e,t,r){"use strict";r.d(t,["BL",0,"finished","CH",0,"recordReplay","Dl",0,"setUserId","Fw",0,"setPageViewName","PA",0,"setCurrentRouteName","Pv",0,"consent","Tb",0,"pauseReplay","U2",0,"addToTrace","V1",0,"measure","Wb",0,"wrapLogger","bt",0,"setErrorHandler","cD",0,"setCustomAttribute","dT",0,"interaction","eY",0,"register","fF",0,"recordCustomEvent","hG",0,"addPageAction","k6",0,"addRelease","nb",0,"setApplicationVersion","o5",0,"noticeError"])},1738(e,t,r){"use strict";r.d(t,{U:()=>l,Y:()=>d});var n=r(3241),i=r(9908),s=r(1863),a=r(944),o=r(3969),c=r(8362),u=r(860);function d(e,t,r,s){const d=s||r;!d||d[e]&&d[e]!==c.d.prototype[e]||(d[e]=function(){(0,i.p)(o.xV,["API/"+e+"/called"],void 0,u.K7.metrics,r.ee),(0,n.W)({drained:!!r.runtime?.activatedFeatures,type:"data",name:"api",feature:"api-"+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,a.R)(23,e)}})}function l(e,t,r,n,a){const o=e.info;null===r?delete o.jsAttributes[t]:o.jsAttributes[t]=r,(a||null===r)&&(0,i.p)("api-"+n,[(0,s.t)(),t,r],void 0,"session",e.ee)}},8374(e,t,r){r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},860(e,t,r){"use strict";const n="events",i="jserrors",s="browser/blobs",a="browser/logs",o={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations"},c={[o.pageViewEvent]:1,[o.pageViewTiming]:2,[o.metrics]:3,[o.jserrors]:4,[o.softNav]:5,[o.ajax]:6,[o.sessionTrace]:7,[o.sessionReplay]:8,[o.logging]:9,[o.genericEvents]:10},u={[o.pageViewEvent]:"rum",[o.pageViewTiming]:n,[o.ajax]:n,[o.softNav]:n,[o.metrics]:i,[o.jserrors]:i,[o.sessionTrace]:s,[o.sessionReplay]:s,[o.logging]:a,[o.genericEvents]:"ins"};r.d(t,["$J",0,u,"K7",0,o,"P3",0,c,"XX",0,i,"Yy",0,a,"df",0,s])}};const t={};function r(n){const i=t[n];if(void 0!==i)return i.exports;const s=t[n]={exports:{}};return e[n](s,s.exports,r),s.exports}r.m=e,r.d=(e,t)=>{if(Array.isArray(t))for(var n=0;n<t.length;){var i=t[n++],s=t[n++];r.o(e,i)?0===s&&n++:0===s?Object.defineProperty(e,i,{enumerable:!0,value:t[n++]}):Object.defineProperty(e,i,{enumerable:!0,get:s})}else for(var i in t)r.o(t,i)&&!r.o(e,i)&&Object.defineProperty(e,i,{enumerable:!0,get:t[i]})},r.f={},r.e=e=>Promise.all(Object.keys(r.f).reduce((t,n)=>(r.f[n](e,t),t),[])),r.u=e=>"nr-rum-1.320.1.min.js",r.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),(()=>{const e={},t="NRBA-1.320.1.PROD:";r.l=(n,i,s,a)=>{if(e[n])return void e[n].push(i);let o,c;if(void 0!==s){const e=document.getElementsByTagName("script");for(var u=0;u<e.length;u++){const r=e[u];if(r.getAttribute("src")==n||r.getAttribute("data-webpack")==t+s){o=r;break}}}if(!o){c=!0;var d={296:"sha512-tVt1vBEIdH0cbF0+FX2YAtMEq3dHpAui3eZmJce4ncISLbsfSol5l/6zmO5AGwZq7lhKosE9/EY+uwxfn03iYw=="};o=document.createElement("script"),o.charset="utf-8",r.nc&&o.setAttribute("nonce",r.nc),o.setAttribute("data-webpack",t+s),o.src=n,0!==o.src.indexOf(window.location.origin+"/")&&(o.crossOrigin="anonymous"),d[a]&&(o.integrity=d[a])}e[n]=[i];const l=(t,r)=>{o.onerror=o.onload=null,clearTimeout(f);const i=e[n];if(delete e[n],o.parentNode?.removeChild(o),i?.forEach(e=>e(r)),t)return t(r)},f=setTimeout(l.bind(null,void 0,{type:"timeout",target:o}),12e4);o.onerror=l.bind(null,o.onerror),o.onload=l.bind(null,o.onload),c&&document.head.appendChild(o)}})(),r.r=e=>{Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.p="https://js-agent.newrelic.com/",(()=>{const e={374:0,840:0};r.f.j=(t,n)=>{let i=r.o(e,t)?e[t]:void 0;if(0!==i)if(i)n.push(i[2]);else{const s=new Promise((r,n)=>i=e[t]=[r,n]);n.push(i[2]=s);const a=r.p+r.u(t),o=new Error,c=n=>{if(r.o(e,t)&&(i=e[t],0!==i&&(e[t]=void 0),i)){const e=n&&("load"===n.type?"missing":n.type),r=n&&n.target&&n.target.src;o.message="Loading chunk "+t+" failed: ("+e+": "+r+")",o.name="ChunkLoadError",o.type=e,o.request=r,i[1](o)}};r.l(a,c,"chunk-"+t,t)}};const t=(t,n)=>{let[i,s,a]=n;var o,c,u=0;if(i.some(t=>0!==e[t])){for(o in s)r.o(s,o)&&(r.m[o]=s[o]);if(a)a(r)}for(t&&t(n);u<i.length;u++)c=i[u],r.o(e,c)&&e[c]&&e[c][0](),e[c]=0},n=self["webpackChunk:NRBA-1.320.1.PROD"]=self["webpackChunk:NRBA-1.320.1.PROD"]||[];n.forEach(t.bind(null,0)),n.push=t.bind(null,n.push.bind(n))})(),(()=>{"use strict";r(8374);var e=r(8362),t=r(860);const n=Object.values(t.K7);var i=r(384),s=r(1741);var a=r(2555),o=r(981);t.K7.genericEvents,o.R.PA,o.R.UA,o.R.BP;const c={RESOURCES:"experimental.resources",REGISTER:"register"};var u=r(9300);const d=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var l=r(2614),f=r(944),g=r(8122);const p="[data-nr-mask]",m=e=>(0,g.a)(e,(()=>{const e={feature_flags:[],experimental:{register:!1,resources:!1,iframe_bridge:!1,iframe_domains:[]},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0,capture_payloads:u.mo.NONE},api:{register:{get enabled(){return e.feature_flags.includes(c.REGISTER)||e.experimental.register},set enabled(t){e.experimental.register=t},duplicate_data_to_container:!1,get allow_iframe_bridge(){return e.feature_flags.includes(c.IFRAME_BRIDGE)||e.experimental.iframe_bridge},set allow_iframe_bridge(t){e.experimental.iframe_bridge=t},get iframe_domains(){return e.experimental.iframe_domains},set iframe_domains(t){Array.isArray(t)?e.experimental.iframe_domains=t:(0,f.R)(1,t)}}},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(c.RESOURCES)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:l.wk,inactiveMs:l.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){d(t)?e.mask_selector="".concat(t,",").concat(p):""===t||null===t?e.mask_selector=p:(0,f.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){d(t)?e.block_selector+=",".concat(t):""!==t&&(0,f.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,f.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]},web_sockets:{enabled:!1}}})());var h=r(6154),v=r(9324);let b=0;const y={buildEnv:"PROD",distMethod:"CDN",version:v.xv,originTime:h.WN},_={consented:!1},w={activatedFeatures:void 0,appMetadata:{},configured:!1,get consented(){return this.session?.state?.consent||_.consented},set consented(e){_.consented=e},customTransaction:void 0,denyList:[],disabled:!1,drainRegistry:new Map,harvester:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++b},listeningForIframeMessages:!1};var R=r(7836),A=r(3241);const x={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0};var E=r(9908);const S="newrelic-iframe-";function k(e,t={},n,o){let{init:c,info:u,loader_config:d,runtime:l={},exposed:f=!0}=t;if(!u){const e=(0,i.pV)();c=e.init,u=e.info,d=e.loader_config}var p;e.init=m(c||{}),e.loader_config=(p=d||{},(0,g.a)(p,x)),u.jsAttributes??={},h.bv&&(u.jsAttributes.isWorker=!0),e.info=(0,a.D)(u);const v=e.init;e.runtime??=(e=>{const t=(0,g.a)(e,w),r=Object.keys(y).reduce((e,t)=>(e[t]={value:y[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)})(l),v.proxy.assets&&(e=>{const t=e.startsWith("http");e+="../../index.html",r.p=t?e:"https://"+e})(v.proxy.assets),e.runtime.configured||(Object.defineProperty(e,"beacons",{get:()=>[e.info.beacon,e.info.errorBeacon,e.init.proxy.assets,e.init.proxy.beacon].filter(Boolean)}),Object.defineProperty(e.runtime,"denyList",{get:()=>[...e.init.ajax.deny_list||[],...e.init.ajax.block_internal?e.beacons:[]]}),e.runtime.ptid=e.agentIdentifier,function(e){const t=(0,i.pV)();Object.getOwnPropertyNames(s.W.prototype).forEach(r=>{const n=s.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let i=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return i?i(...t):n})})}(e),e.runtime.loaderType=n,e.ee=R.ee.get(e.agentIdentifier),e.exposed=f,(0,A.W)({drained:!!e.runtime.activatedFeatures,type:"lifecycle",name:"initialize",feature:void 0,data:e.config}),e.init.api.register.allow_iframe_bridge&&h.gm.addEventListener("message",t=>{"string"==typeof t.data?.type&&t.data.type.startsWith(S)&&(0,E.p)("iframe-message",[t],void 0,"IFRAME",e.ee)}),e.runtime.configured=!0)}var T=r(1863),j=r(4261),P=r(1738);var N=r(1687),O=r(4234),M=r(5289),I=r(7767);function D(e){return!!(0,i.dV)().o.MO&&(0,I.V)(e)&&!0===e?.session_trace.enabled}var V=r(6389),W=r(7699);const B=new WeakSet;class K extends O.W{constructor(e,t){super(e,t),this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=>{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=>{this.ee.on("manual-start-all",(0,V.J)(()=>{(0,N.Ak)(e,this.featureName),t()}))}):(0,N.Ak)(e,t)}importAggregator(e,t,n={}){if(this.featAggregate)return;const i=async()=>{if(await this.deferred,this.#t(e),!(0,a.f)(e.info))return(0,f.R)(43),e.ee.abort(),void this.loadedSuccessfully(!1);let i;try{if((0,I.V)(e.init)){const{setupAgentSession:t}=await r.e(296).then(r.bind(r,8391));i=t(e)}}catch(e){(0,f.R)(20,e),this.ee.emit("internal-error",[e]),(0,E.p)(W.qh,[e],void 0,this.featureName,this.ee)}if(e.init.api.register.allow_iframe_bridge)try{const{setupIframeMFEMessageListener:t}=await Promise.resolve().then(function(){const e=new Error("Cannot find module '../../loaders/configure/iframe-message-handler'");throw e.code="MODULE_NOT_FOUND",e});t(e)}catch(e){(0,f.R)(23,e)}try{if(!this.#r(this.featureName,i,e.init))return(0,N.Ze)(this.agentRef,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:r}=await t();this.featAggregate=new r(e,n),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,f.R)(34,e),this.abortHandler?.(),(0,N.Ze)(this.agentRef,this.featureName,!0),this.loadedSuccessfully(!1),this.ee&&this.ee.abort()}};h.RI?(0,M.GG)(()=>i(),!0):i()}#r(e,r,n){if(this.blocked)return!1;switch(e){case t.K7.sessionReplay:return D(n)&&!!r;case t.K7.sessionTrace:return!!r;default:return!0}}#t(e){if(!B.has(e)&&(B.add(e),!(0,a.f)(e.info))){const t=(0,i.pV)();let r={...t.info?.jsAttributes};try{r={...r,...e.info?.jsAttributes}}catch(e){}k(e,{...t,info:{...t.info,jsAttributes:r},runtime:e.runtime},e.runtime.loaderType)}}}var C=r(6630);class U extends K{static featureName=C.T;constructor(e){var t;super(e,C.T),this.setupInspectionEvents(),t=e,(0,P.Y)(j.Fw,function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,E.p)("api-"+j.Fw,[(0,T.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=>r.e(296).then(r.bind(r,1324)))}setupInspectionEvents(){const e=(e,t)=>{e&&(0,A.W)({timeStamp:e.timeStamp,loaded:"complete"===e.target.readyState,type:"window",name:t,data:e.target.location+""})};(0,M.sB)(t=>{e(t,"DOMContentLoaded")}),(0,M.GG)(t=>{e(t,"load")}),(0,M.Qr)(t=>{e(t,"navigate")}),this.ee.on(l.tS.UPDATE,(e,t)=>{(0,A.W)({type:"lifecycle",name:"session",data:t})})}}class L extends e.d{constructor(e){var t;(super(),h.gm)?(this.features={},(0,i.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(U),k(this,e,e.loaderType||"agent"),t=this,(0,P.Y)(j.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return(0,P.U)(t,e,r,j.cD,n);(0,f.R)(40,typeof r)}else(0,f.R)(39,typeof e)},t),function(e){(0,P.Y)(j.Dl,function(t,r=!1){if("string"!=typeof t&&null!==t)return void(0,f.R)(41,typeof t);const n=e.info.jsAttributes["enduser.id"];r&&null!=n&&n!==t?(0,E.p)("api-setUserIdAndResetSession",[t],void 0,"session",e.ee):(0,P.U)(e,"enduser.id",t,j.Dl,!0)},e)}(this),function(e){(0,P.Y)(j.nb,function(t){if("string"==typeof t||null===t)return(0,P.U)(e,"application.version",t,j.nb,!1);(0,f.R)(42,typeof t)},e)}(this),function(e){(0,P.Y)("start",function(){e.ee.emit("manual-start-all")},e)}(this),function(e){(0,P.Y)(j.Pv,function(t=!0){if("boolean"==typeof t){if((0,E.p)("api-"+j.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=>{const r=t.featAggregate;e&&!r.sentRum&&r.sendRum()})}}else(0,f.R)(65,typeof t)},e)}(this),this.run()):(0,f.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return n.forEach(r=>{t[r]=!!e[r]?.enabled}),t}(this.init),r=[...this.desiredFeatures];r.sort((e,r)=>t.P3[e.featureName]-t.P3[r.featureName]),r.forEach(r=>{if(!e[r.featureName]&&r.featureName!==t.K7.pageViewEvent)return;const n=function(e){switch(e){case t.K7.ajax:return[t.K7.jserrors];case t.K7.sessionTrace:return[t.K7.ajax,t.K7.pageViewEvent];case t.K7.sessionReplay:return[t.K7.sessionTrace];case t.K7.pageViewTiming:return[t.K7.pageViewEvent];default:return[]}}(r.featureName).filter(e=>!(e in this.features));n.length>0&&(0,f.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)})}catch(e){(0,f.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,i.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}var F=r(2843),G=r(782);class H extends K{static featureName=G.T;constructor(e){super(e,G.T),h.RI&&((0,F.u)(()=>(0,E.p)("docHidden",[(0,T.t)()],void 0,G.T,this.ee),!0),(0,F.G)(()=>(0,E.p)("winPagehide",[(0,T.t)()],void 0,G.T,this.ee)),this.importAggregator(e,()=>r.e(296).then(r.bind(r,9981))))}}var z=r(3969);class Y extends K{static featureName=z.TZ;constructor(e){super(e,z.TZ),this.importAggregator(e,()=>r.e(296).then(r.bind(r,9623)))}}new L({features:[U,H,Y],loaderType:"lite"})})()})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="tlB7EEvc5viaZzmNi_90YjSlksDSTmIQb8WSxjD-PA0" />
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<script src="https://kit.fontawesome.com/5a8f6d3433.js" crossorigin="anonymous"></script>
+
+<title>Hazardous Materials &#8211; Stanford Environmental Health &amp; Safety</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='http://www.googletagmanager.com/' />
+<link rel='dns-prefetch' href='../../index.html' />
+<link rel='dns-prefetch' href='http://static.addtoany.com/' />
+<link rel='dns-prefetch' href='http://ajax.googleapis.com/' />
+<link rel='dns-prefetch' href='http://unpkg.com/' />
+<link rel='dns-prefetch' href='http://cdnjs.cloudflare.com/' />
+<link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
+<link rel='dns-prefetch' href='http://www.stanford.edu/' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="../../wp-json/oembed/1.0/embed2ad7.json?url=https%3A%2F%2Fehs.stanford.edu%2Ftopic%2Fhazardous-materials" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="../../wp-json/oembed/1.0/embedcd76?url=https%3A%2F%2Fehs.stanford.edu%2Ftopic%2Fhazardous-materials&amp;format=xml" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+<style id="classic-theme-styles-inline-css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+
+<link rel='stylesheet' id='wc-blocks-style-css' href='../../wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks8868.css?ver=wc-10.3.5' media='all' />
+
+<link rel='stylesheet' id='awsm-ead-public-css' href='../../wp-content/plugins/embed-any-document/css/embed-public.minb246.css?ver=2.7.8' media='all' />
+<link rel='stylesheet' id='wp-components-css' href='../../wp-includes/css/dist/components/style.min42a0.css?ver=7.0.2' media='all' />
+<link rel='stylesheet' id='wp-preferences-css' href='../../wp-includes/css/dist/preferences/style.min42a0.css?ver=7.0.2' media='all' />
+<link rel='stylesheet' id='wp-block-editor-css' href='../../wp-includes/css/dist/block-editor/style.min42a0.css?ver=7.0.2' media='all' />
+<link rel='stylesheet' id='popup-maker-block-library-style-css' href='../../wp-content/plugins/popup-maker/dist/packages/block-library-style5828.css?ver=dbea705cfafe089d65f1' media='all' />
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='ehs_easter_egg_styles-css' href='../../wp-content/plugins/ehs-easter-eggs-wp/assets/css/justifiedGallery42a0.css?ver=7.0.2' media='all' />
+<link rel='stylesheet' id='suehs-style-css' href='../../wp-content/themes/suehs/style5cd0.css?ver=1787203560' media='all' />
+<link rel='stylesheet' id='font-awesome-css' href='http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css' media='all' />
+<link rel='stylesheet' id='google-fonts-css' href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic,700italic' media='all' />
+<link rel='stylesheet' id='su-identity-css' href='http://www.stanford.edu/su-identity/css/su-identity.css' media='all' />
+<link rel='stylesheet' id='original-theme-0-css' href='../../wp-content/themes/suehs/assets/css/original-theme-04b68.css?ver=1.0.4' media='all' />
+<link rel='stylesheet' id='original-theme-1-css' href='../../wp-content/themes/suehs/assets/css/original-theme-14b68.css?ver=1.0.4' media='all' />
+<link rel='stylesheet' id='theme-style-overrides-css' href='../../wp-content/themes/suehs/assets/css/theme-style-overrides4b68.css?ver=1.0.4' media='all' />
+<link rel='stylesheet' id='add-to-calendar-css' href='../../wp-content/themes/suehs/assets/css/atc-style4bf4.css?ver=1.0.3' media='all' />
+<link rel='stylesheet' id='tippy-css-css' href='http://unpkg.com/tippy.js@5/dist/backdrop.css' media='all' />
+<link rel='stylesheet' id='tippy-css-light-css' href='http://unpkg.com/tippy.js@5/themes/light.css' media='all' />
+<link rel='stylesheet' id='gfonts-open-sans-css' href='http://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;display=swap' media='all' />
+<link rel='stylesheet' id='fontawesome-css' href='../../wp-content/themes/suehs/assets/css/all.mind3c7.css?ver=6.5.1' media='all' />
+<link rel='stylesheet' id='woocommerce-layout-css' href='../../wp-content/plugins/woocommerce/assets/css/woocommerce-layoutd3a6.css?ver=10.3.5' media='all' />
+<link rel='stylesheet' id='woocommerce-smallscreen-css' href='../../wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreend3a6.css?ver=10.3.5' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css' href='../../wp-content/plugins/woocommerce/assets/css/woocommerced3a6.css?ver=10.3.5' media='all' />
+<style id="woocommerce-inline-inline-css">
+.woocommerce form .form-row .required { visibility: visible; }
+/*# sourceURL=woocommerce-inline-inline-css */
+</style>
+<link rel='stylesheet' id='brands-styles-css' href='../../wp-content/plugins/woocommerce/assets/css/brandsd3a6.css?ver=10.3.5' media='all' />
+<link rel='stylesheet' id='addtoany-css' href='../../wp-content/plugins/add-to-any/addtoany.mind47c.css?ver=1.16' media='all' />
+<style id="addtoany-inline-css">
+.a2a_kit {vertical-align: middle;}
+/*# sourceURL=addtoany-inline-css */
+</style>
+<script id="woocommerce-google-analytics-integration-gtag-js-after">
+/* Google Analytics for WooCommerce (gtag.js) */
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					// Set up default consent state.
+					for ( const mode of [{"analytics_storage":"denied","ad_storage":"denied","ad_user_data":"denied","ad_personalization":"denied","region":["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IS","IE","IT","LV","LI","LT","LU","MT","NL","NO","PL","PT","RO","SK","SI","ES","SE","GB","CH"]}] || [] ) {
+						gtag( "consent", "default", { "wait_for_update": 500, ...mode } );
+					}
+					gtag("js", new Date());
+					gtag("set", "developer_id.dOGY3NW", true);
+					gtag("config", "G-TLEDRW0KHT", {"track_404":true,"allow_google_signals":false,"logged_in":false,"linker":{"domains":[],"allow_incoming":false},"custom_map":{"dimension1":"logged_in"}});
+//# sourceURL=woocommerce-google-analytics-integration-gtag-js-after
+</script>
+<script id="jquery-js" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script id="addtoany-core-js-before">
+window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};
+a2a_config.icon_color="transparent,#007c94";
+
+//# sourceURL=addtoany-core-js-before
+</script>
+<script id="addtoany-core-js" defer src="https://static.addtoany.com/menu/page.js"></script>
+<script id="addtoany-jquery-js" defer src="../../wp-content/plugins/add-to-any/addtoany.min4963.js?ver=1.1"></script>
+<script id="script-js" src="../../wp-content/themes/suehs/assets/js/script77ae.js?ver=2"></script>
+<script id="compromise-js" src="../../wp-content/themes/suehs/assets/js/compromise.min.js"></script>
+<script id="popper-js-js" src="https://unpkg.com/popper.js@1"></script>
+<script id="tippy-js-js" src="https://unpkg.com/tippy.js@5"></script>
+<script id="mask-input-js" src="../../wp-content/themes/suehs/assets/js/cleave.min.js"></script>
+<script data-wp-strategy="defer" defer id="wc-jquery-blockui-js" src="../../wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.minf967.js?ver=2.7.0-wc.10.3.5"></script>
+<script data-wp-strategy="defer" defer id="wc-js-cookie-js" src="../../wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min5aa6.js?ver=2.1.4-wc.10.3.5"></script>
+<script id="woocommerce-js-extra">
+var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_password_show":"Show password","i18n_password_hide":"Hide password"};
+//# sourceURL=woocommerce-js-extra
+</script>
+<script data-wp-strategy="defer" defer id="woocommerce-js" src="../../wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.mind3a6.js?ver=10.3.5"></script>
+<script id="zt-embed-js" src="../../wp-content/plugins/zingtree/js/iframeResizerSmart42a0.js?ver=7.0.2"></script>
+<script data-wp-strategy="defer" defer id="image_zoooom-js" src="../../wp-content/plugins/wp-image-zoooom/assets/js/jquery.image_zoom.minfdf2.js?ver=1.60"></script>
+<script id="image_zoooom-init-js-extra">
+var IZ = {"options":{"lensShape":"square","lensSize":200,"lensBorderSize":1,"lensBorderColour":"#ffffff","borderRadius":10,"cursor":"default","zoomWindowWidth":600,"zoomWindowHeight":560,"zoomWindowOffsetx":10,"borderSize":4,"borderColour":"#888888","zoomWindowShadow":4,"lensFadeIn":1000,"lensFadeOut":1000,"zoomWindowFadeIn":0,"zoomWindowFadeOut":0,"easingAmount":12},"with_woocommerce":"0","exchange_thumbnails":"1","enable_mobile":"0","woo_categories":"0","woo_slider":"1","enable_surecart":"0"};
+//# sourceURL=image_zoooom-init-js-extra
+</script>
+<script data-wp-strategy="defer" defer id="image_zoooom-init-js" src="../../wp-content/plugins/wp-image-zoooom/assets/js/image_zoom-initfdf2.js?ver=1.60"></script>
+<link rel="https://api.w.org/" href="../../wp-json/index.html" />
+<meta name="generator" content="WordPress 7.0.2" />
+<meta name="generator" content="WooCommerce 10.3.5" />
+<link rel="canonical" href="../hazardous-materials.html" />
+	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<style type="text/css">img.zoooom,.zoooom img{padding:0!important;}</style><script type="text/javascript"></script><link rel="icon" href="../../wp-content/uploads/stanford-favicon.png" sizes="32x32" />
+<link rel="icon" href="../../wp-content/uploads/stanford-favicon.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="../../wp-content/uploads/stanford-favicon.png" />
+<meta name="msapplication-TileImage" content="https://ehs.stanford.edu/wp-content/uploads/stanford-favicon.png" />
+
+  <meta name="sip" value="false">
+
+  <meta name="eip" value="false">
+
+<script type="text/javascript">
+  !function(a,b,c,d,e,f,g,h){a.RaygunObject=e,a[e]=a[e]||function(){
+  (a[e].o=a[e].o||[]).push(arguments)},f=b.createElement(c),g=b.getElementsByTagName(c)[0],
+  f.async=1,f.src=d,g.parentNode.insertBefore(f,g),h=a.onerror,a.onerror=function(b,c,d,f,g){
+  h&&h(b,c,d,f,g),g||(g=new Error(b)),a[e].q=a[e].q||[],a[e].q.push({
+  e:g})}}(window,document,"script","http://cdn.raygun.io/raygun4js/raygun.min.js","rg4js");
+</script>
+
+<script src="../../wp-content/themes/suehs/assets/js/moment.min.js"></script>
+
+<!--output page ID into DOM for cleaner recent page visit cooki-->
+
+<!-- Deprecated UA tracking script: commented out as of April 2025. GA4 is now the active tracker. And in the footer.php -->
+<!-- Global site tag (gtag.js) - Google Analytics OLD TAG DAN HAD IN HERE... COMMENTING OUT BECAUSE IT'S DEPRECATED AND CAUSING ISSUES
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-93759838-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-93759838-4',
+    {'custom_map': {'dimension2': 'sip', 'dimension3': 'eip'}});
+
+    // Sends an event that passes 'age' as a parameter.
+    gtag('event', 'sip_dimension', {'sip': document.getElementsByName("sip")[0].getAttribute("value")});
+    gtag('event', 'eip_dimension', {'eip': document.getElementsByName("eip")[0].getAttribute("value")});
+
+</script>-->
+
+
+	<!-- Hotjar Tracking Code for https://ehs.stanford.edu -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:555111,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+
+        <!-- Google Tag Manager -->
+       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+       })(window,document,'script','dataLayer','GTM-TMNHS3T');</script>
+       <!-- End Google Tag Manager -->
+
+	   <meta name="google-site-verification" content="KMtyXp2EzEODedhSN2NhcuoxNo0DEy5AOKgBHEIURJI" />
+</head>
+
+<body class="wp-singular topic-template-default single single-topic postid-2037 wp-theme-suehs theme-suehs woocommerce-no-js">
+
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TMNHS3T"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<p id="skip-link">
+	<a href="#main-menu" class="element-invisible element-focusable">Jump to navigation</a>
+</p>
+<div id="brandbar">
+	<div class="container">
+		<a href="https://www.stanford.edu/">
+			<img src="https://www.stanford.edu/su-identity/images/brandbar-stanford-logo@2x.png" alt="Stanford University" width="152" height="23">
+		</a>
+	</div>
+</div>
+
+<div id="su-wrap">
+	<div id="su-content">
+
+		
+			<section class="global-search">
+				<div class="container">
+		<!--TODO: for some reason delete this breaks the site-->
+				</div>
+			</section>
+		
+		
+		<header class="site-header" role="banner">
+			<div class="container">
+				<div class="l-1up">
+
+					<!-- ========================================================================= -->
+					<!-- Header Left: Contains Emergency Info, Logo, and Mobile Toggle           -->
+					<!-- ========================================================================= -->
+					
+					<div class="header-left">
+					<h4 class="header-emergency header-emergency--mobile">
+							<small>For medical, fire or law enforcement assistance, call 911</small><br>
+							<small>For EH&amp;S emergencies, including after hours, call (650) 725-9999</small>
+					</h4>
+						<!-- Site Logo -->
+						<h2 class="site-logo">
+							<a href="../../index.html" title="Home" rel="home" class="header__logo" id="logo">
+								<img src="../../wp-content/themes/suehs/assets/images/logo--stanford.svg" alt="Stanford EH&amp;S" title="Home" class="header__logo-image" />
+							</a>
+						</h2>
+						<div class="mobile-toggle"> <!-- Mobile Toggle Button -->
+							<a class="mobile-toggle__menu button button--small" href="javascript:void(0);"><i class="fa fa-bars"></i> <span class="menu-label">Menu</span></a>
+						</div>
+					</div>
+
+					<!-- Mobile Search Form (only shows on non-front pages) -->
+											
+					
+					<!-- ========================================================================= -->
+					<!-- Header Right: Contains Desktop Helper & Utility Navs                      -->
+					<!-- ========================================================================= -->
+					<div class="header-right">
+
+						<!-- Helper Navigation (Desktop) -->
+						<ul class="menu helper-nav">
+																
+								
+															<!-- User is NOT logged in -->
+							
+
+
+							<li class="menu__item is-leaf first leaf">
+								<a class="menu__link menu__link button button--light button--small" href="../../contact.html" id="menu-link-askus">Contact <span>Us</span></a>
+							</li>
+							<li class="menu__item is-leaf last leaf">
+								<a class="menu__link button button--small" href="https://su17.stanford.edu/" id="menu-link-report">Report an <span>Incident (SU-17)</span></a>
+							</li>
+							
+						</ul>
+
+						<!-- Utility Navigation (Desktop) -->
+						<ul class="menu utility-nav">
+
+							<!-- Emergency contact information -->
+							<h4 class="header-emergency">
+								<small>For medical, fire or law enforcement assistance, call <strong>911</strong></small><br>
+								<small>For EH&amp;S emergencies, including after hours, call <strong>(650) 725-9999</strong></small>
+							</h4>
+
+							
+						</ul>
+
+					</div>
+				</div>
+			</div>
+
+			<!-- ========================================================================= -->
+			<!-- Mobile Navigation Wrapper (hidden on desktop)                             -->
+			<!-- ========================================================================= -->
+			<div class="header-navs">
+
+				<!-- Mobile Helper Navigation -->
+				<ul class="menu helper-nav--mobile">
+					<li class="menu__item is-leaf first leaf"><a class="menu__link" href="../../contact.html">Contact <span>Us</span></a></li>
+					<li class="menu__item is-leaf last leaf"><a class="menu__link" href="https://su17.stanford.edu/">Report an Incident <span>(SU-17)</span></a></li>
+				</ul>
+
+				<!-- Main Mobile Navigation -->
+				<nav class="main-nav">
+					<ul class="menu">
+						<li class="menu__item is-leaf first leaf"><a href="../../role.html" id="menu-link-roles" class="menu__link">Roles</a></li>
+						<li class="menu__item is-leaf leaf"><a href="../../topic.html" id="menu-link-topics" class="menu__link">Health &amp; Safety Topics</a></li>
+						<li class="menu__item is-leaf leaf"><a href="../../services.html" id="menu-link-services" class="menu__link">Services</a></li>
+						<li class="menu__item is-leaf leaf"><a href="../../training.html" id="menu-link-training" class="menu__link">Training</a></li>
+						<li class="menu__item is-leaf leaf"><a href="../../manual.html" id="menu-link-manuals" class="menu__link">Guides &amp; Manuals</a></li>
+						<li class="menu__item is-leaf leaf"><a href="../../standard-operating-procedure.html" id="menu-link-sops" class="menu__link">Standard Operating Procedures</a></li>
+						<li class="menu__item is-leaf leaf"><a href="../../forms-tools.html" id="menu-link-tools" class="menu__link">Forms &amp; Tools</a></li>
+						
+													<li class="menu__item is-leaf last leaf">
+								<!-- <div class="ring-container">...</div> -->
+								<a href="../../learning-library.html" id="menu-link-learning-library" class="menu__link">Learning Library</a>
+							</li>
+													<!-- <li class="menu__item is-leaf last leaf"><a href="../../news.html" id="menu-link-news" class="menu__link">EH&amp;S News</a></li> -->
+											</ul>
+				</nav>
+
+				<!-- Mobile Utility Navigation -->
+				
+
+			</div>
+		</header>
+
+<script>
+
+	// Update the cart item count at the top of the page
+	/*$(document).on("updated_cart_totals", function(event) {
+		// Reload the page so the cart total at the top will be accurate
+		var itemCount = 0;
+		
+		$('input[name$="[qty]"]').each(function() {
+			itemCount += parseInt($(this).val());
+		});
+
+		if (itemCount === 0) {
+			// No more items left in the cart, so hide the cart icon
+			$('#safety-store-cart').hide();
+			$('#safety-store-cart-mobile').hide();
+		} else {
+			// Update the item count in the cart
+			$('#safety-store-item-count').text(itemCount);
+		};
+	});
+
+	// Listen for items to be removed from the cart
+	$(document).ajaxComplete(function(event, xhr, ajaxOpts) {
+        // Check if the ajax call was to remove an item from the Woocommerce cart
+        /*if (ajaxOpts.url.indexOf("cart?remove_item") !== -1) {
+			if ($('input[name$="[qty]"]').length === 0) {
+				// All items have been removed from the cart
+				$('#safety-store-cart').hide();
+				$('#safety-store-cart-mobile').hide();
+			};
+		};
+		console.log(ajaxOpts.url); // @todo
+	});*/
+
+	/*$(document).on( 'updated_cart_totals', function(){
+		console.log('hiiiii'); // @todo
+	});*/
+	/*$(document.body).on('added_to_cart removed_from_cart', function() {
+		//console.log('added or removed from cart'); // @todo
+		alert('boo');
+	});
+
+	$( document.body ).on( 'added_to_cart', function( event, fragments, cart_hash, $button ){
+		alert('added to cart'); // @todo
+	});*/
+
+</script>
+	
+	
+		<!-- USE FOR SUBTOPICS -->
+		<script>if ($('.breadcrumbs').length == 0) {$('header:first').after('<div class="breadcrumbs"><div class="container"><div class="l-1up"><ul><li><a href="../../index.html">Home</a> <i class="fa fa-angle-right"></i></li><li><a href="../../topic.html">Health &amp; Safety Topics</a> <i class="fa fa-angle-right"></i></li><li><a href="../../topic/hazardous-materials.html">Hazardous Materials</a> <i class="fa fa-angle-right"></i></li><li class="current">Asbestos</li></ul></div></div></div>');}</script>
+		<section>
+			<div class="container">
+				<div class="l-1up">
+					<div class="page-title">
+						<h1 class="title">Asbestos</h1>
+											</div>
+				</div>
+				<main class="l-66-33--1">
+					<div class="meta-bar">
+						<a href="javascript:window.print()" class="button button--small button-print"><i class="fa fa-print"></i> Print</a>
+						<div class="a2a_kit a2a_kit_size_20 addtoany_list" data-a2a-url="https://ehs.stanford.edu/topic/hazardous-materials" data-a2a-title="Hazardous Materials"><a class="a2a_button_email" href="https://www.addtoany.com/add_to/email?linkurl=https%3A%2F%2Fehs.stanford.edu%2Ftopic%2Fhazardous-materials&amp;linkname=Hazardous%20Materials" title="Email" rel="nofollow noopener" target="_blank"></a><a class="a2a_button_copy_link" href="https://www.addtoany.com/add_to/copy_link?linkurl=https%3A%2F%2Fehs.stanford.edu%2Ftopic%2Fhazardous-materials&amp;linkname=Hazardous%20Materials" title="Copy Link" rel="nofollow noopener" target="_blank"></a></div>					</div>
+
+					<p>Asbestos-containing construction materials were commonly used in older buildings. The prevalence and adverse health effects associated with exposure to these materials has prompted the enactment of numerous public safety regulations. EH&amp;S has developed a comprehensive Asbestos Management Plan designed to ensure the safety of students, faculty, staff, and visitors. These buildings can be located using the search tool within the <a href="https://ofweb.stanford.edu/pls/apex/f?p=229:55:::::APP_BUILDING_ID" target="_parent">Asbestos Building Database Tool</a>.</p>
+<h2 dir="ltr">Elements</h2>
+<p dir="ltr">To accomplish our goal of maintaining a safe and healthy learning and work environment, the Asbestos Management Plan encompasses:</p>
+<ul dir="ltr">
+<li>Providing consultation and serving as an expert resource to the campus community</li>
+<li>Developing and implementing safe work practices</li>
+<li>Conducting ongoing building surveys and safety inspections</li>
+<li>Conducting air quality and employee exposure monitoring</li>
+<li>Developing and maintaining web-based access to survey data</li>
+<li>Providing project specifications and oversight of abatement actions</li>
+<li>Evaluating and pre-qualifying abatement contractors and consultants</li>
+<li>Developing and delivering awareness training tailored to Stanford&#8217;s physical facilities</li>
+<li>Coordinating earthquake preparedness resources and response actions</li>
+</ul>
+<h2>Asbestos notification</h2>
+<p>The Connelly Act requires employers to notify employees of construction materials known to contain asbestos that are located in buildings constructed prior to 1981. This notification is provided to new Stanford employees and distributed to all employees online annually by Human Resources. HR provides a link to the online notification, which is available in both English and Spanish (see the tabs below).</p>
+<h2>What&#8217;s asbestos?</h2>
+<p>See the <a href="../../reference/asbestos-fact-sheet.html">Asbestos Fact Sheet</a> for known uses on campus, health risks, and ways to protect you and others from exposure.</p>
+<h3 dir="ltr">Building survey information</h3>
+<p dir="ltr">Asbestos building survey summaries are available to the campus community via a searchable on-line database. Survey data for each building is presented in a tabular format that is periodically revised and expanded to include new survey or abatement information. See the below &#8220;Asbestos Building Survey Information System&#8221; tab for more information.</p>
+<h4 dir="ltr">Facility Design Standard</h4>
+<p dir="ltr">Stanford&#8217;s Facility Design Standard (FDS) is a guidance document used by architects and engineers in charge of developing construction plans and specifications. A section of the FDS describes contractor health and safety requirements for asbestos, lead, and other EH&amp;S-related issues.</p>
+<h2 dir="ltr">Asbestos Management Plan</h2>
+<p dir="ltr">Stanford&#8217;s protocols and procedures for managing asbestos and asbestos-related hazards are contained in the Asbestos Management Plan (AMP). See the tabs below for the full plan.</p>
+<div class="l-1up" role="main"><a href="#campus-buildings-containing-asbestos-materials-connelly-act-notification" class="accordion__button" id="campus-buildings-containing-asbestos-materials-connelly-act-notification">Campus Buildings Containing Asbestos Materials (Connelly Act Notification)</a><ol class="section-list accordion__content"><li><p>Stanford University employees are hereby notified of the presence of asbestos-containing materials (ACMs) in campus buildings. While such notification is required by California Health &amp; Safety Code 25915 et seq., Stanford is committed to maintaining a safe and healthy work and learning environment. Contact the EH&amp;S Asbestos, Lead and Construction Safety Program office at (650) 723-0448 for more information about ACMs in specific campus buildings.</p>
+<p>Asbestos is a common name given to a group of mineral fibers that occur naturally and have been incorporated into a variety of construction products, such as wall and ceiling plasters, floor tile, pipe insulation, and asphalt roofing. These materials pose no risk to health unless they are disturbed in such a way that asbestos fibers become airborne, are inhaled, and are deposited within the lungs. Increased incidence of several illnesses, including asbestosis (a debilitating lung disease), lung cancer, and mesothelioma (a rare cancer of the lung or stomach cavity lining), have been observed in individuals who were persistently exposed to high levels of airborne asbestos in work environments such as mining, milling, shipbuilding, construction, and manufacturing.</p>
+<p>Stanford EH&amp;S conducts on-going building surveys to identify and safely manage previously installed asbestos-containing products. Furthermore, all renovation of campus buildings must be reviewed in advance by EH&amp;S to ensure that no ACMs are disturbed without proper safeguards. Work that requires removal or repair of ACMs is restricted to trained and qualified persons.</p>
+<p>Use the following measures to protect you and others from exposure to airborne asbestos:</p>
+<ul>
+<li>Presume all building materials contain asbestos, until determined otherwise by EH&amp;S.</li>
+<li>Do not remove, cut, drill, sand, grind, or otherwise disturb any material that may contain asbestos.</li>
+<li>Do not go above ceilings, behind walls, or into building spaces, such as attics and crawlspaces, unless these areas have been inspected and cleared by EH&amp;S.</li>
+<li>Do not pull cable or wiring through above-ceiling spaces with asbestos.</li>
+<li>Do not install screws, pins, nails, or hangers into asbestos ceiling or wall plasters.</li>
+<li>Be careful not to damage walls, ceilings, or floors when moving furniture or equipment.</li>
+<li>Do not brush, sweep, or vacuum textured asbestos ceiling plaster or plaster debris.</li>
+<li>Immediately report any observed damage or deterioration of suspect building materials to your supervisor, building manager, Facilities Zone Manager, or to EH&amp;S.</li>
+</ul>
+<p>Stanford is committed to a policy of safely and effectively managing asbestos on campus. The University maintains a staff of certified professionals at EH&amp;S who conduct building material surveys, coordinate and supervise asbestos construction activities, perform air monitoring, and provide training.</p>
+<p>Asbestos survey results listing specific locations where ACM may be encountered within your building, detailed procedures for working with asbestos, and bulk and air monitoring sample analysis results are available for review and photocopying to any Stanford employee. If you have specific questions related to this information, or would like an EH&amp;S staff member to review the above information with you, please contact EH&amp;S at (650) 723-0448.</p>
+<br></li></ol><br></div><div class="l-1up" role="main"><a href="#materiales-que-contienen-asbestos-en-los-edificios-de-la-universidad" class="accordion__button" id="materiales-que-contienen-asbestos-en-los-edificios-de-la-universidad">Materiales que Contienen Asbestos en los Edificios de la Universidad</a><ol class="section-list accordion__content"><li><p>Esta aviso tiene como propósito notificar a los empleados de la Universidad de Stanford, que existen edificios en el campus con materiales que contienen asbestos (ACMs). Aunque esta notificación anual es obligatoria según el Código de Salud y Seguridad de California numero 25915 y subsequentes, Stanford está comprometida a mantener un ambiente de trabajo y aprendizaje seguro y saludable. Para más información acerca de ACMs en un edificio especifico dentro del campus, por favor póngase en contacto con la oficina del programa de EH&amp;S Asbestos/Plomo al teléfono (650) 723-0448.</p>
+<p>Asbestos es el nombre de un grupo de minerales de origen natural que se utilizan en varios materiales de construcción como en paredes de yeso, las baldosas del suelo, aislamiento de tuberías, y las tejas de asfalto. Estos materiales no son peligrosos para la salud a menos que se alteren de tal manera que las fibras de asbestos se liberen de los materiales que las contienen y estas floten en el aire de donde podrían ser inhaladas y depositadas en los pulmones. Una mayor incidencia de enfermedades graves como la asbestosis (una enfermedad debilitante de los pulmones), el cáncer de pulmón y el mesotélioma (un cáncer raro de la pleura de los pulmón o de la cavidad estomacal) se ha observado en individuos que han sido expuestos persistentemente a altos niveles de asbestos en ambientes laborales como minas, construcción naval, construcción y el sector manufacturero.</p>
+<p>La oficina de EH&amp;S de la Universidad de Stanford constantemente lleva a cabo monitoreos en sus instalaciones para identificar y tratar de una forma segura y controlada los productos y materiales de construcción utilizados en el pasado que contienen asbestos. Además, todos los proyectos de renovación de edificios del campus tienen que ser revisados por adelantado por la oficina de EH&amp;S para asegurar que los materiales que contienen asbestos no sean perturbados sin las adecuadas medidas de seguridad. Todos los trabajos que requieren la remoción o reparación de ACMs están restringidos exclusivamente a personal calificado.</p>
+<p>Use las siguientes medidas de protección contra la exposición a las fibras de asbestos:</p>
+<ul>
+<li>Asuma que todos los materiales del edificio contienen asbestos hasta que la oficina de EH&amp;S determine lo contrario.</li>
+<li>No remueva, corte, taladre, lije o disturbe cualquier material que pueda contener asbestos.</li>
+<li>No vaya a áreas por encima de los techos suspendidos, detrás de las paredes, o áreas en los edificios tales como áticos y las áreas debajo de los cimientos a menos que estas zonas hayan sido inspeccionadas y aprobadas por EH&amp;S.</li>
+<li>No instale cables o alambres en espacios por encima de techos que tengan asbestos.</li>
+<li>No instale tornillos, calvos, o ganchos en las paredes de yeso o techos que contienen asbestos.</li>
+<li>Tenga cuidado de no dañar paredes, techos y suelos cuando mueva muebles o equipos.</li>
+<li>No cepille, barra o aspire residuos de yeso de paredes y techo.</li>
+<li>Si observa materiales del edificio que están dañados o deteriorados, avise inmediatamente a su supervisor, al gerente de su edificio, al gerente de la zona institutional (Facilities Zone Manager) o a EH&amp;S.</li>
+</ul>
+<p>Stanford esta comprometida a una política de controlar de manera segura y efectiva los asbestos en el campus. La Universidad mantiene profesionales acreditados en EH&amp;S que se encargan de inspeccionar materiales de construcción; de coordinar y supervisar las actividades relacionadas con asbestos; de monitorear la calidad del aire; y de proveer entrenamiento. Cualquier empleado de la Universidad de Stanford puede obtener a su disposición los resultados de los monitoreos conducidos en su edificio en los sitios donde se sospecha que pueden haber ACMs; los procedimientos detallados para trabajar con asbestos; y los resultados de analisis de calidad del aire y muestras obtenido. Si usted tiene alguna pregunta sobre la información proporcionada en esta carta o si quiere que un miembro de EH&amp;S revise esta información con usted, favor de contactar EH&amp;S al (650) 723-0448.</p>
+<br></li></ol><br></div><div class="l-1up" role="main"><a href="#plan-background" class="accordion__button" id="plan-background">Plan Background</a><ol class="section-list accordion__content"><li><p>In order to maintain a healthy work environment and to comply with all laws and regulations governing workplace safety, Stanford has developed an Asbestos Management Plan (AMP) describing asbestos-related program responsibilities, hazard assessment and control, safe work practices, training, and recordkeeping.</p>
+<p>Asbestos is a common name for a group of naturally occurring mineral fibers. Due to its strength, durability, and insulating qualities, it has been used in a wide variety of construction products. Although many types of asbestos-containing products were banned by the late 1970s, asbestos can still be found in products containing a binding agent, such as vinyl floor tile, roofing material, and cement pipe.</p>
+<p>Asbestos-containing materials have been identified in many of the approximately 800 buildings located on the Stanford campus. In some areas, asbestos has been identified in one or more of the following construction products:</p>
+<ul>
+<li>fireproofing that has been spray-applied to structural steel and ceiling decks</li>
+<li>pipe, boiler, tank and air duct thermal insulation</li>
+<li>roofing felt and mastic</li>
+<li>cement-type flue, conduit, pipe and siding</li>
+<li>wall and ceiling textured or acoustical surfacing plaster</li>
+<li>vinyl floor tile and sheet goods</li>
+<li>vinyl flooring, rubber basecove, ceramic tile and acoustic tile mastic</li>
+<li>caulking and glazing compound</li>
+<li>acoustic ceiling and wall tile</li>
+<li>fume hood liners</li>
+<li>exhaust ducts and lab counter tops</li>
+<li>fire-rated doors</li>
+</ul>
+<p>The University has conducted numerous building surveys and has implemented stringent control measures in order to identify and safely manage these types of asbestos-containing products.</p>
+<p>Asbestos becomes a hazard only when small particles become airborne, are inhaled, and are deposited within the lungs. Increased incidence of several illnesses, including asbestosis (a debilitating lung disease), lung cancer, and mesothelioma (a cancer of the lung cavity lining), have been observed in industry and trade workers who were persistently exposed to airborne asbestos fibers over extended periods of time. Asbestos-containing materials in buildings pose no risk to health unless asbestos fibers become airborne and are inhaled. Intact, sealed, and undisturbed materials are not a hazard.</p>
+<p>The purpose of the AMP is to:</p>
+<ul>
+<li>Protect the campus community from exposure to airborne asbestos hazards.</li>
+<li>Ensure compliance with local, state, and federal laws and regulations governing the identification and control of asbestos-related hazards on campus.</li>
+</ul>
+<h2>Reference Documents</h2>
+<p>All procedures specified in the AMP conform to the following applicable codes, ordinances, rules, regulations, orders and standards. Where conflicting or overlapping requirements or specifications exist, the more stringent requirements shall apply.</p>
+<h3>Laws and Regulations</h3>
+<p>Federal laws and regulations: Occupational Safety and Health Act, 29 USC 651 et seq., and all applicable Occupational Safety and Health Administration (OSHA) regulations thereunder; Clean Air Act, 42 USC 7401 et seq., and all applicable U.S. Environmental Protection Agency (EPA) regulations thereunder; Hazardous Materials Transportation Act, 49 USC 1801 et seq., and all applicable Department of Transportation (DOT) regulations thereunder.</p>
+<p>State of California laws and regulations: Hazardous Substances Information and Training Act, Labor Code 6360 et seq.; Labor Code 6401.7, 6408, 6501.5 through 6501.9, 6503.5, 6505.5, 9021.5, 9030; all applicable regulations of the Department of Industrial Relations (DIR) including 8 CCR 340 through 342, 1531, 1509, 3202, 5144, 5156 through 5158, 5194, 5208 and 1529; Hazardous Waste Control Law, Health and Safety Code 25100 et seq., and all applicable Department of Toxic Substances Control (DTSC) regulations thereunder, including 22 CCR Div. 4.5 et seq.; Safe Drinking Water and Toxic Enforcement Act of 1986, Health &amp; Safety Code 25249.5 et seq., and all applicable regulations thereunder, including 22 CCR 12100 et seq.; Bus. &amp; Prof. Code 7058.5 and corresponding regulations, including 16 CCR Ch. 8.</p>
+<p>Local laws and regulations: Bay Area Air Quality Management District (BAAQMD), Regulation 11, Rule 2.</p>
+<h3>Codes, Standards and Guidance Documents</h3>
+<ul>
+<li>National and State Fire Code, Electrical Code, Plumbing Code, Building Code, and other related codes where applicable</li>
+<li>ASTM: American Society for Testing and Materials</li>
+<li>ANSI: American National Standards Institute</li>
+<li>ULI: Underwriters Laboratories, Inc.</li>
+</ul>
+<br></li></ol><br></div><div class="l-1up" role="main"><a href="#responsibilities" class="accordion__button" id="responsibilities">Responsibilities</a><ol class="section-list accordion__content"><li><p>Stanford manages asbestos safety through EH&amp;S&#8217;s Asbestos Management Program (AMP). The overall development, administration, and maintenance of the program is the responsibility of the Asbestos Program Manager, with elements of the program implemented locally, as described below.</p>
+<h2>Asbestos Program Manager responsibilities</h2>
+<p>The Asbestos Program Manager must:</p>
+<ul>
+<li>Represent the University on matters of regulatory compliance and act as a liaison to agencies having jurisdiction over asbestos-related issues</li>
+<li>Ensure that asbestos-related activities are conducted in compliance with applicable laws and regulations</li>
+<li>Inspect, identify, and inventory accessible ACM and PACM in Stanford-owned buildings, and provide periodic inspections to ensure that identified materials are maintained in a non-hazardous condition</li>
+<li>Provide detailed building material surveys of areas scheduled for maintenance, demolition, or renovation, and coordinate abatement of affected ACMs prior to, or phased with, other construction activities</li>
+<li>Provide employee exposure and work practice evaluation to ensure protective measures are adequate and conform to regulatory requirements</li>
+<li>Conduct training needs assessment for employees and ensure that required training is provided</li>
+<li>Provide notifications and install warning signs and labels, as required by applicable laws and regulations</li>
+<li>Provide abatement project specifications and oversight of abatement activities</li>
+<li>Provide recommended safety procedures to schools and departments</li>
+<li>Provide consultation to Construction Project Managers</li>
+<li>Develop qualification standards for asbestos abatement contractors and consultants</li>
+<li>Evaluate contractors and consultants based on the qualification criteria</li>
+<li>Maintain a list of contractors and consultants approved to work at the University</li>
+<li>Respond to asbestos-related concerns or questions raised by the campus community</li>
+<li>Provide consultation and maintain technical expertise on asbestos-related issues</li>
+<li>Provide centralized data management and maintenance of asbestos-related records</li>
+</ul>
+<h2>Campus Fire Marshall</h2>
+<p>The Campus Fire Marshall must ensure that a statement requiring an asbestos building survey is included as a comment for all renovation and demolition projects, as part of the Construction Plans Review Process.</p>
+<h2>School and department responsibilities</h2>
+<p>Schools and departments must:</p>
+<ul>
+<li>Maintain familiarity with, and implement applicable elements of, the AMP</li>
+<li>Provide resources to implement program requirements</li>
+<li>Ensure that staff receive adequate training</li>
+<li>Ensure that individuals within the school or department responsible for management of maintenance, demolition, or renovation projects are aware that an asbestos survey and clearance by EH&amp;S is required prior to any disturbance of building materials</li>
+<li>Notify EH&amp;S of any visible damage or deterioration to known or suspect ACM in a timely fashion</li>
+</ul>
+<h2>Supervisor responsibilities</h2>
+<p>Supervisors must:</p>
+<ul>
+<li>Ensure new employees receive Connelly Act notification within two weeks of start date, and are aware of building material disturbance restrictions</li>
+<li>Coordinate and schedule required training and medical surveillance, and provide personal protective equipment (if applicable) for employees</li>
+<li>Maintain asbestos-related records in an organized fashion</li>
+<li>Ensure employees are aware of, and comply with, asbestos-related protocols and procedures, and discipline employees who violate safety requirements</li>
+</ul>
+<h2>Employee responsibilities</h2>
+<p>Employees must:</p>
+<ul>
+<li>Attend required training</li>
+<li>Use protective equipment properly and follow asbestos-related protocols and procedures</li>
+<li>Notify EH&amp;S or their supervisor of any visible damage or deterioration to known or suspect ACM in a timely fashion</li>
+</ul>
+<h2>Stanford Real Estate responsibilities</h2>
+<p>Stanford Real Estate manages leased properties owned (lessor) or occupied (lessee) by Stanford University, and is responsible for managing all asbestos-related issues and compliance obligations for these properties. The Asbestos Program Manager is available to Stanford Real Estate for consultation purposes.</p>
+<h2>SLAC and Medical Center responsibilities</h2>
+<p>The Stanford Linear Accelerator and Stanford Medical Center are independent entities and maintain EH&amp;S offices that are responsible for managing all asbestos-related issues and compliance obligations. The Asbestos Program Manager is available to SLAC and the Medical Center for consultation.</p>
+<br></li></ol><br></div><div class="l-1up" role="main"><a href="#prohibited-activities" class="accordion__button" id="prohibited-activities">Prohibited Activities</a><ol class="section-list accordion__content"><li><h2>General activities</h2>
+<ul>
+<li>No employee, unless he or she is specifically trained and designated to do so, is allowed to disturb asbestos-containing materials during the course of their work. Employees shall not remove, cut, drill, sand, grind, or otherwise abrade any construction material that may contain asbestos.</li>
+<li>No employee is allowed to enter a space known or suspected to contain significantly damaged friable asbestos-containing material without prior evaluation of the space by the Asbestos Program Manager. This includes ceiling spaces that contain spray-applied fireproofing material and any space with damaged pipe or tank insulation.</li>
+<li>No employee is allowed to go above ceilings or behind walls unless the area has been evaluated and cleared by the Asbestos Program Manager.</li>
+</ul>
+<h2>Asbestos-related work practices</h2>
+<p>The work practices and engineering controls in this section apply to employees specifically trained and designated to perform asbestos-related work. The following activities are prohibited under all circumstances:</p>
+<ul>
+<li>Use of high-speed abrasive disc saws that are not equipped at point of cut with HEPA-filtered exhaust devices</li>
+<li>Compressed air used to remove asbestos, unless the compressed air is used in conjunction with an enclosed HEPA-filtered ventilation system designed to capture the dust cloud created by the compressed air</li>
+<li>Dry sweeping, shoveling, or other dry clean-up of dust and debris containing asbestos</li>
+<li>Employee rotation as a means of reducing employee exposure to asbestos</li>
+<li>Smoking, eating, drinking, applying cosmetics, or chewing tobacco in regulated areas</li>
+</ul>
+<br></li></ol><br></div><div class="l-1up" role="main"><a href="#contractors-and-consultants" class="accordion__button" id="contractors-and-consultants">Contractors and Consultants</a><ol class="section-list accordion__content"><li><h2>Contractor pre-qualification requirements</h2>
+<p>The Asbestos Program Manager maintains a list of qualified asbestos abatement contractors approved to work at Stanford. Contractors must submit the following information and documentation for review and approval prior to bidding on work and/or award of contract:</p>
+<ul>
+<li>Company profile providing a general description and age of the company, summary of professional qualifications, organizational structure, and company size</li>
+<li>Resumes of management personnel, including site supervisors who will be assigned to Stanford projects</li>
+<li>Description of at least three representative projects, each of which must include the client&#8217;s name, scope of work, cost, and a contact name and phone number</li>
+<li>Description of the company&#8217;s Injury and Illness Prevention Program</li>
+<li>Documentation of DOSH registration and the certification issued by the State of California Contractors License Board</li>
+<li>A list of citations or penalties, past or pending, issued by any regulatory agency</li>
+</ul>
+<h2>Consultant pre-qualification requirements</h2>
+<p>The Asbestos Program Manager maintains a list of certified asbestos consultants approved to work at Stanford. Consultants must submit the following information and documentation for review and approval prior to bidding on work and/or award of contract:</p>
+<ul>
+<li>A company profile providing a general description and age of the company, summary of professional qualifications, certifications, organizational structure, company size, and list of services</li>
+<li>Resumes of management personnel and all personnel who will be assigned to Stanford projects. Management personnel must include a certified industrial hygienist (on staff) who has direct supervisory responsibility of Stanford projects</li>
+<li>Description of at least three representative projects for each type of service provided, including the client&#8217;s name, scope of work, dollar value, contact name, and telephone number</li>
+<li>Detailed description of quality control protocols and procedures used to minimize random and systematic errors associated with equipment use, survey and sampling methodologies, data validation, and report generation</li>
+<li>Summary of company&#8217;s Injury and Illness Prevention Program that includes, as applicable, a description of training programs related to hazard communication, respiratory protection, and asbestos</li>
+</ul>
+<h2>Project specifications</h2>
+<p>EH&amp;S has developed a Uniform Asbestos Abatement Project Specification that governs all aspects of contracted asbestos-related work, including work performed under Service Order Agreements. The Specification is provided to Construction Project Managers and is periodically reviewed by the Asbestos Program Manager to ensure that regulatory compliance and policy elements remain current.</p>
+<h2>Uniform reporting formats</h2>
+<p>EH&amp;S has developed a series of reporting forms to document contractor compliance during work performed under the Asbestos Abatement Specification. The forms are used by in-house personnel and may be issued to outside asbestos consultants hired to perform oversight of asbestos abatement projects. The forms are reviewed by the Asbestos Program Manager periodically to ensure that compliance elements remain current and consistent with the Abatement Specification.</p>
+<h2>Service Order Agreements</h2>
+<p>Stanford EH&amp;S executes and maintains Service Order Agreements with certified asbestos abatement contractors. These contracts ensure a quick response in the event of an asbestos release and provide an effective means to manage small and medium scale projects. The Asbestos Program Manager determines the number of agreements necessary to provide coverage of Stanford projects and coordinates the development and award of the agreements with Stanford’s Contracts and Procurement Office.</p>
+<br></li></ol><br></div><div class="l-1up" role="main"><a href="#building-inspections-and-hazard-assessment" class="accordion__button" id="building-inspections-and-hazard-assessment">Building Inspections and Hazard Assessment</a><ol class="section-list accordion__content"><li><h2>Initial inspections</h2>
+<p>Federal and State regulations require that all buildings constructed prior to 1981 be inspected for asbestos-containing materials (ACM) and presumed asbestos-containing materials (PACM). Stanford has conducted numerous inspections and building materials surveys to date. The Asbestos Program Manager must develop a strategy to ensure that all affected buildings receive an initial inspection and that previous inspections conform to current regulatory requirements.</p>
+<h2>Periodic inspections</h2>
+<p>Following initial inspection, those buildings found to contain ACM and/or PACM shall be re-inspected on a periodic basis to ensure that the identified materials remain in a non-hazardous condition. The Asbestos Program Manager is responsible for developing a strategy to ensure that all affected buildings receive periodic inspections and to prioritize buildings that contain accessible, friable ACM and/or PACM.</p>
+<h2>Project-related surveys</h2>
+<p>A comprehensive asbestos survey, which may include bulk material sampling and destructive methods to access hidden materials, is required prior to the start of any maintenance, renovation, or demolition project. The Project Manager is responsible for contacting the Asbestos Program Manager and requesting the survey.</p>
+<p>The Project Manager is also responsible for providing the Asbestos Program Manager with any descriptions, plans, drawings, or specifications that indicate the extent of the work. The Asbestos Program Manager must generate a report that presents the findings of the survey and provides an inventory and location of confirmed ACMs within the project area and forward it to the Project Manager.</p>
+<h2>Hazard assessment</h2>
+<p>During the course of an asbestos inspection or survey, the inspector will assess the condition of confirmed or suspected ACM and PACM, then determine if a potential airborne hazard exists. Based on this assessment, the Asbestos Program Manager will determine if a response action is required and, if so, the level of response action necessary to abate the hazard. The Asbestos Program Manager will initiate the response action and provide oversight of the abatement operation.</p>
+<h2>Inspection data management</h2>
+<p>The Asbestos Program Manager maintains building inspection and survey information that is organized by building, easily accessible, and readily available. This includes hard copies of raw data and final reports, as well as information accessible through Stanford’s online electronic recordkeeping system.</p>
+<br></li></ol><br></div><div class="l-1up" role="main"><a href="#notifications" class="accordion__button" id="notifications">Notifications</a><ol class="section-list accordion__content"><li><h2>Contractor notifications</h2>
+<p>Contractors engaged in construction-related activities must be notified of the presence and location of known asbestos-containing materials within their defined project areas. The Asbestos Program Manager provides a survey report to the Stanford Project Manager, who incorporates it into contract documents prior to each bid.</p>
+<p>Contractors should stop work and notify the Project Manager immediately if additional (hidden) suspected asbestos-containing materials are discovered during the course of their work.</p>
+<h2>Abatement-related notifications</h2>
+<p>Prior to the start of an asbestos removal project, the abatement contractor is required to notify the appropriate regulatory agencies. These may include the Cal/OSHA temporary worksite notification and the Bay Area Air Quality Management District’s NESHAPs notification.</p>
+<p>The abatement contractor is required to post OSHA asbestos regulated area warning signs at the entrance to any regulated area, as mandated by State and Federal OSHA regulations.</p>
+<p>The Stanford Project Manager must notify tenants who occupy building areas adjacent to an asbestos abatement activity of the nature and duration of the work, either through written or verbal communication or by posting signs. The Asbestos Program Manager can assist in developing these postings.</p>
+<h2>Signs and labels</h2>
+<p>Cal/OSHA regulations require building owners to post warning signs at the entrances to mechanical spaces that contain asbestos thermal system insulation (TSI) or surfacing materials. The regulation also requires labeling (where feasible) of existing installed asbestos-containing products.</p>
+<p>As part of the building inspection process, the Asbestos Program Manager:</p>
+<ol>
+<li>Determines which areas require posting.</li>
+<li>Generates signs that conform to the regulatory requirements.</li>
+<li>Posts the signs.</li>
+<li>Logs and tracks the locations of the signs using a database application.</li>
+</ol>
+<p>Asbestos warning signs generated under this section also contain information required by Proposition 65.</p>
+<p>As part of the building inspection process, the Asbestos Program Manager also installs warning labels on asbestos-containing products, where feasible.</p>
+<h2>Connelly Act notification</h2>
+<p>State law (the Connelly Bill) requires building owners to provide written notification to employees and contractors regarding known asbestos-containing construction materials within their buildings. Notification must be provided to new employees within two weeks of their employment start date and to all employees on an annual basis.</p>
+<p>The Asbestos Program Manager assists the Associate Vice Provost of EH&amp;S in developing and providing the notification.</p>
+<br></li></ol><br></div><div class="l-1up" role="main"><a href="#air-monitoring-and-response-actions" class="accordion__button" id="air-monitoring-and-response-actions">Air Monitoring and Response Actions</a><ol class="section-list accordion__content"><li><h2>Air monitoring</h2>
+<h3>Environmental monitoring</h3>
+<p>Environmental monitoring is used to evaluate airborne fiber concentrations within a prescribed building area, or to release a regulated area for re-occupancy following completion of an abatement activity.</p>
+<p>The Asbestos Program Manager determines, based on a hazard assessment, if ambient airborne fiber monitoring is necessary and, if so, which sample collection and analysis method is appropriate. The Asbestos Program Manager also evaluates sampling results to determine if airborne fiber levels comply with established regulatory requirements and, if not, designates the appropriate response action to abate the elevated levels.</p>
+<p>The need for environmental “clearance” monitoring following an abatement activity depends on the nature of the activity, the type and quantity of asbestos-containing material affected, the engineering controls used, and area occupancy. Protocols for clearance monitoring of large-scale abatement projects are defined in the University’s Uniform Asbestos Abatement Specification, which all abatement contractors must follow. The Asbestos Program Manager determines if environmental monitoring is required for small-scale projects and which sampling and analysis methods are appropriate, based on the aforementioned conditions.</p>
+<h3>Personal exposure monitoring</h3>
+<p>Personal exposure monitoring is used to evaluate an employee’s exposure to airborne fibers during an asbestos-related activity and to determine if the level of personal protective equipment (PPE, including respiratory protection) worn by the employee is adequate to prevent over-exposure, in accordance with OSHA regulations.</p>
+<p>The Asbestos Program Manager performs initial and periodic monitoring of employees engaged in asbestos-related work. Separate monitoring is provided for each distinct work task, such as removing small amounts of vinyl floor tile. The Asbestos Program Manager determines, based on the results of initial monitoring and regulatory requirements, if additional periodic monitoring is required and, if so, the appropriate monitoring interval.</p>
+<p>The Asbestos Program Manager utilizes a database application to track exposure monitoring data and to generate a report for each monitoring episode. The report is sent directly to the employee and the employee’s supervisor, and provides pertinent information on monitoring conditions, as well as the employee’s eight-hour time-weighted average and/or short-term excursion exposure.</p>
+<h2>Incidental release</h2>
+<p>Release of asbestos-containing materials is never immediately dangerous to life or health (IDLH). Incidental release of asbestos-containing materials may occur during an inadvertent disturbance, such as accidently bumping up against spray-applied fireproofing in an attic space, or an environmental condition such as an earthquake.</p>
+<ul>
+<li>If the release occurs during off-hours or weekends, the area is either evacuated and isolated until the Asbestos Program Manager can provide an assessment of the situation or the campus Emergency Response Team is activated to respond.</li>
+<li>If the release occurs during normal work hours, the Asbestos Program Manager is contacted to respond.</li>
+</ul>
+<p>The Asbestos Program Manager provides a hazard assessment and determines the appropriate response action to an incidental release. Contributing factors include:</p>
+<ul>
+<li>Material friability</li>
+<li>Quantity released</li>
+<li>Moisture content</li>
+<li>Asbestos type and concentration</li>
+<li>Area ventilation</li>
+<li>Level of occupancy and type of occupancy (use of space)</li>
+</ul>
+<p>The Asbestos Program Manager coordinates evacuation and isolation of the area, if necessary, and abatement of the hazard. The Asbestos Program Manager also determines when it is safe to re-enter the isolated area (by environmental air monitoring or other means) and issues the &#8220;all clear.&#8221;</p>
+<h2>Emergency preparedness</h2>
+<p>In the event of a major earthquake, significant quantities of asbestos-containing materials may become dislodged or damaged and release airborne fibers. This condition may render an area or entire building unsafe to enter and hamper efforts at assessment and response by structural engineers and Stanford maintenance personnel.</p>
+<p>As part of the campus-wide asbestos building inspection process, the Asbestos Program Manager develops and maintains a priority list of buildings with the highest potential for airborne asbestos hazards resulting from a major earthquake. Generally, the highest priority buildings on this list contain significant quantities of friable surfacing materials, such as spray-applied structural fireproofing and acoustic ceiling plaster, and areas with large quantities of thermal system insulation such as boiler rooms. The list is updated periodically to reflect ongoing abatement activities and provided to campus entities responsible for emergency preparedness planning and coordination of response actions.</p>
+<p>The Asbestos Management Program assists the initial response team by providing inspections, air monitoring, and asbestos hazard assessments that can be used to determine if a building or area is safe to re-enter or re-occupy. The Asbestos Program Manager also coordinates response actions to abate identified asbestos hazards.</p>
+<br></li></ol><br></div><div class="l-1up" role="main"><a href="#training-and-surveillance" class="accordion__button" id="training-and-surveillance">Training and Surveillance</a><ol class="section-list accordion__content"><li><h2>Asbestos awareness</h2>
+<p>To comply with OSHA’s hazard communication requirements, asbestos awareness training is provided to all facility maintenance personnel who may encounter, but are not allowed to disturb, asbestos-containing materials (ACMs) during the course of their work. Awareness training is provided by the Asbestos Program Manager and contains the following elements:</p>
+<ul>
+<li>Asbestos uses and forms</li>
+<li>Health effects</li>
+<li>Types and locations of ACMs in campus facilities</li>
+<li>Hazard recognition</li>
+<li>Safety signs and labels</li>
+<li>Safe work practices and prohibited activities</li>
+</ul>
+<p>To comply with OSHA Class IV work requirements, asbestos awareness training is mandatory for employees who perform housekeeping operations in areas where asbestos-containing materials are present. Awareness training is provided by the Asbestos Program Manager and contains the following elements:</p>
+<ul>
+<li>Health effects</li>
+<li>Location of asbestos within the facility</li>
+<li>Recognition of damage and deterioration</li>
+<li>Regulatory requirements</li>
+<li>Proper response to fiber release episodes</li>
+</ul>
+<p>Class IV training is required initially, and annually thereafter.</p>
+<h2>Operations and maintenance</h2>
+<p>Facilities maintenance employees who are permitted to disturb small amounts of asbestos-containing materials through the course of their work are required to undergo initial OSHA Class III 16-hour asbestos training. Training is provided by the Asbestos Program Manager or a certified consultant, and contains the following elements:</p>
+<ul>
+<li>Asbestos uses and forms</li>
+<li>Health effects</li>
+<li>Location of asbestos within the facility</li>
+<li>Recognition of damage and deterioration</li>
+<li>Proper handling methods</li>
+<li>Use of respiratory protection</li>
+<li>Regulatory requirements and safe work practices</li>
+</ul>
+<p>Training includes both classroom and hands-on skills training. Training is required initially, and annually thereafter.</p>
+<h2>Respiratory protection</h2>
+<p>Employees engaged in asbestos-related activities must participate in the University’s Respiratory Protection Program. Respiratory training and fit testing is provided by the EH&amp;S Occupational Health &amp; Safety Program.</p>
+<p>Training is required initially, and annually thereafter.</p>
+<h2>Medical surveillance</h2>
+<p>Employees who perform asbestos-related operations and maintenance tasks and/or are required to wear respiratory protection during the course of their work receive annual physical examinations from Stanford’s Occupational Health Clinic, which is located within the EH&amp;S.</p>
+<p>The Occupational Health Physician consults with the Asbestos Program Manager to ensure that the type and frequency of the examinations meet OSHA regulatory compliance requirements, based on the asbestos-related work tasks assigned to the employee.</p>
+<br></li></ol><br></div><div class="l-1up" role="main"><a href="#maintenance-and-recordkeeping" class="accordion__button" id="maintenance-and-recordkeeping">Maintenance and Recordkeeping</a><ol class="section-list accordion__content"><li><h2>Operations and maintenance procedures</h2>
+<p>The Asbestos Program Manager is responsible for developing or approving work procedures for each distinct asbestos-related task performed by University employees. Each work procedure is assigned a unique identification number and contains a header with the procedure title, application, brief description, and last revision date.</p>
+<p>The body of the procedure is divided into three sections that address personal protective equipment, the materials and equipment required to perform the task, and the step-by-step procedure itself. The Asbestos Program Manager provides initial supervision, exposure monitoring, and hands-on training to employees performing any new asbestos-related task.</p>
+<h2>Recordkeeping</h2>
+<h3>Asbestos Management Program</h3>
+<p>The Asbestos Program Manager maintains, in hard copy and/or electronic format, all asbestos-related records, including:</p>
+<ul>
+<li>Building inspection and survey reports</li>
+<li>Asbestos abatement project documentation</li>
+<li>Environmental and personal exposure monitoring</li>
+<li>Operations and maintenance procedures</li>
+<li>Equipment calibration and maintenance information</li>
+<li>Sampling and analysis data</li>
+<li>Regulatory agency compliance inspections</li>
+<li>All other documentation directly related to the Asbestos Management Program</li>
+</ul>
+<p>Information and documentation related to a specific building or building area, such as inspection data and abatement records, is organized and maintained according to the assigned quad or building number.</p>
+<h3>Supervisors</h3>
+<p>Supervisors are responsible for maintaining the following for employees under their supervision:</p>
+<ul>
+<li>Asbestos training records and certificates</li>
+<li>Medical surveillance reports</li>
+<li>Respirator fit testing data</li>
+<li>Asbestos work procedures</li>
+</ul>
+<br></li></ol><br></div><div class="l-1up" role="main"><a href="#asbestos-building-survey-information-system" class="accordion__button" id="asbestos-building-survey-information-system">Asbestos Building Survey Information System</a><ol class="section-list accordion__content"><li><p dir="ltr">Information on asbestos-containing materials in Stanford buildings is summarized in <a href="https://ofweb.stanford.edu/pls/apex/f?p=229:55:::::APP_BUILDING_ID">a searchable database</a>, organized by building and presented in a tabular format for ease of printing. You can search the database using either a building&#8217;s name or its assigned Quad-Building number. Use the Quad-Building number when possible since building names may change over time. Visit the <a href="https://lbre.stanford.edu/maps">Facilities Operations Maps &amp; Records website</a> if you need more information on building names or Quad-Building numbers.</p>
+<p dir="ltr">Survey data for all of Stanford&#8217;s nearly 800 buildings may not be available, and new survey or abatement information will be added as it is received.</p>
+<p dir="ltr">The information contained in the database is intended to provide an overview of the types and locations of asbestos-containing materials in Stanford buildings. Use of this information does not replace, supersede, or nullify the requirement for an additional site evaluation by EH&amp;S prior to any renovation, demolition, or maintenance activity that disturbs building materials.</p>
+<p dir="ltr">The database table format consists of four columns that are labeled and defined as follows:</p>
+<p dir="ltr"><strong>Building System &amp; Material Type:</strong> Identifies the type of suspect material and the building system with which it is associated (e.g. floors, walls, pipes, etc.)</p>
+<p dir="ltr"><strong>Location:</strong> Identifies specific or general areas of the building where the material has been observed</p>
+<p dir="ltr"><strong>Comments:</strong> Provides additional pertinent information related to the material</p>
+<p dir="ltr"><strong>Asbestos:</strong> Places the material into one of four categories based on occurrence and asbestos content. These categories are:</p>
+<ol dir="ltr">
+<li>Yes: This type of material is present and known to contain asbestos through testing, product information, or other means.</li>
+<li>No: This type of material is either not present or, if present, is known to be asbestos-free through testing, building age, or other means.</li>
+<li>Presumed: This type of material is present but has not been tested, and therefore is presumed to contain asbestos until testing proves otherwise.</li>
+<li>Unknown: This type of material has not been observed, but may be present in inaccessible concealed spaces and, if encountered, should be presumed to contain asbestos until testing proves otherwise.</li>
+</ol>
+<br></li></ol><br></div><br>
+				</main>
+
+
+				<aside class="l-66-33--2">
+					<!-- Sidebar/widget goes here -->
+					<div class="sidebar">
+
+							<div class="side-block">
+
+							<h4 class="side-block__title lede-header"><a href=../hazardous-materials.html class="active-trail active">Hazardous Materials</a></h4>
+							<ul class="side-block__nav">
+
+							<li><a href="air-sensitive-or-highly-reactive-compounds.html">Air-Sensitive or Highly Reactive Compounds</a><i class="fa fa-angle-right"></i></li><li><a href="asbestos.html" class="active-trail active">Asbestos</a><i class="fa fa-angle-right"></i></li><li><a href="hazardous-materials-storage-requirements.html">Hazardous Materials Storage Requirements</a><i class="fa fa-angle-right"></i></li><li><a href="lead.html">Lead</a><i class="fa fa-angle-right"></i></li><li><a href="nanomaterials.html">Nanomaterials</a><i class="fa fa-angle-right"></i></li><li><a href="proposition-65.html">Proposition 65</a><i class="fa fa-angle-right"></i></li><li><a href="research-alcohol-purchase.html">Purchasing Industrial Alcohol for Research</a><i class="fa fa-angle-right"></i></li><li><a href="../../waste-streams.html">Recycling and Disposal Guide</a><i class="fa fa-angle-right"></i></li><li><a href="select-agent-toxins.html">Select Agent Toxins</a><i class="fa fa-angle-right"></i></li><li><a href="shipping-hazardous-materials.html">Shipping Hazardous Materials</a><i class="fa fa-angle-right"></i></li><li><a href="shipping-hazardous-biologicals-and-chemicals-internationally.html">Shipping Hazardous Biologicals and Chemicals Internationally</a><i class="fa fa-angle-right"></i></li><li><a href="transportation-of-hazardous-materials.html">Transportation or Shipping of Hazardous Materials</a><i class="fa fa-angle-right"></i></li><li><a href="toxic-gas.html">Toxic Gas</a><i class="fa fa-angle-right"></i></li><li><a href="high-hazard-policy.html">High Hazard Policy</a><i class="fa fa-angle-right"></i></li>
+	          				</ul>
+	  					</div>
+
+						<div class="side-block">
+						<h4 class="side-block__title lede-header sidebar-roles">Relevant For</h4>
+
+						
+
+						</div>
+
+					</div>
+				</aside>
+
+			</div>
+		</section>
+
+	
+	
+	<script>
+		// Listen for the user to click on a collapsed section and toggle it
+		$('.accordion__button').click(function(e) {
+			e.preventDefault();
+
+			var $next = $(this).next();
+			console.log( $next.css('display') ); // @todo
+			if ($next.css('display') == 'none') {
+				$next.slideDown('fast');
+			} else {
+				$next.slideUp('fast');
+			};
+		});
+
+		// Sub-sub-section collapsible
+		$('.sub_accordion__button').click(function(e) {
+			e.preventDefault();
+
+			console.log('clicked'); // @todo
+
+			var $next = $(this).next();
+			console.log($next); // @todo
+			console.log($next.css('display')); // @todo
+			if ($next.css('display') == 'none') {
+				$next.slideDown('fast');
+			} else if ($next.css('display') == 'block') {
+				$next.slideUp('fast');
+			} else {
+				console.log('in else'); // @todo
+				// Can't determine the state so assume it's closed and show it
+				$next.slideUp('fast');
+			};
+		});
+	</script>
+
+	<script>
+		$(document).ready(function () {
+		    var hash = document.location.hash;
+		    if (hash) {
+		    	var elem = $(hash);
+		    	history.scrollRestoration = "manual";
+		        elem[0].click();
+		        elem[0].scrollIntoView();
+		    }
+		});
+	</script>
+
+	
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/suehs/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+	<script type='text/javascript'>
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<script data-wp-strategy="async" id="google-tag-manager-js" src="https://www.googletagmanager.com/gtag/js?id=G-TLEDRW0KHT"></script>
+<script id="wp-hooks-js" src="../../wp-includes/js/dist/hooks.min394d.js?ver=7496969728ca0f95732d"></script>
+<script id="wp-i18n-js" src="../../wp-includes/js/dist/i18n.mineca5.js?ver=781d11515ad3d91786ec"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="woocommerce-google-analytics-integration-js" src="../../wp-content/plugins/woocommerce-google-analytics-integration/assets/js/build/main0b79.js?ver=ecfb1dac432d1af3fbe6"></script>
+<script id="awsm-ead-pdf-object-js" src="../../wp-content/plugins/embed-any-document/js/pdfobject.minb246.js?ver=2.7.8"></script>
+<script id="awsm-ead-public-js-extra">
+var eadPublic = [];
+//# sourceURL=awsm-ead-public-js-extra
+</script>
+<script id="awsm-ead-public-js" src="../../wp-content/plugins/embed-any-document/js/embed-public.minb246.js?ver=2.7.8"></script>
+<script id="ehs_easter_eggs_nlp-js" src="../../wp-content/themes/suehs/assets/js/compromise.min.js"></script>
+<script id="ehs_easter_eggs_justified-js" src="../../wp-content/plugins/ehs-easter-eggs-wp/assets/js/jquery.justifiedGallery.min.js"></script>
+<script id="homepage-js-js" src="../../wp-content/themes/suehs/assets/js/homepage-styling-and-animations.js"></script>
+<script id="topic-js-js" src="../../wp-content/themes/suehs/assets/js/single-topic-addons.js"></script>
+<script id="js_QYglOhI3S2SbNpGldeREGKgoLiaz6Fs9ZTgOyQnLz90-js" src="../../wp-content/themes/suehs/assets/js/js_QYglOhI3S2SbNpGldeREGKgoLiaz6Fs9ZTgOyQnLz90.js"></script>
+<script id="js_HAIV-hdRCWnBfxK6LiU0cNrBIzimyS9DjDLPNqBUTGs-js" src="../../wp-content/themes/suehs/assets/js/js_HAIV-hdRCWnBfxK6LiU0cNrBIzimyS9DjDLPNqBUTGs.js"></script>
+<script id="js_gkJ5k8KbPfBLcYFNYAK0XG9VinYr_9SM56FybHGHb-g-js" src="../../wp-content/themes/suehs/assets/js/js_gkJ5k8KbPfBLcYFNYAK0XG9VinYr_9SM56FybHGHb-g.js"></script>
+<script id="modernizer-js" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script id="add-to-calendar-js" src="../../wp-content/themes/suehs/assets/js/atc.min4a7d.js?ver=20151215"></script>
+<script id="suehs-navigation-js" src="../../wp-content/themes/suehs/assets/js/navigation4a7d.js?ver=20151215"></script>
+<script id="slick-js" src="../../wp-content/themes/suehs/assets/js/slick.js"></script>
+<script id="body-script-js" src="../../wp-content/themes/suehs/assets/js/body-script.js"></script>
+<script id="suehs-skip-link-focus-fix-js" src="../../wp-content/themes/suehs/assets/js/skip-link-focus-fix4a7d.js?ver=20151215"></script>
+<script id="zt-popup-modal-js" src="../../wp-content/plugins/zingtree/js/zt-popup-modal42a0.js?ver=7.0.2"></script>
+<script id="sourcebuster-js-js" src="../../wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.mind3a6.js?ver=10.3.5"></script>
+<script id="wc-order-attribution-js-extra">
+var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"base64":false,"ajaxurl":"https://ehs.stanford.edu/wp-admin/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":true},"fields":{"source_type":"current.typ","referrer":"current_add.rf","utm_campaign":"current.cmp","utm_source":"current.src","utm_medium":"current.mdm","utm_content":"current.cnt","utm_id":"current.id","utm_term":"current.trm","utm_source_platform":"current.plt","utm_creative_format":"current.fmt","utm_marketing_tactic":"current.tct","session_entry":"current_add.ep","session_start_time":"current_add.fd","session_pages":"session.pgs","session_count":"udata.vst","user_agent":"udata.uag"}};
+//# sourceURL=wc-order-attribution-js-extra
+</script>
+<script id="wc-order-attribution-js" src="../../wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.mind3a6.js?ver=10.3.5"></script>
+<script id="woocommerce-google-analytics-integration-data-js-after">
+window.ga4w = { data: {"cart":{"items":[],"coupons":[],"totals":{"currency_code":"USD","total_price":0,"currency_minor_unit":2}}}, settings: {"tracker_function_name":"gtag","events":["purchase","add_to_cart","remove_from_cart","view_item_list","select_content","view_item","begin_checkout"],"identifier":"product_sku"} }; document.dispatchEvent(new Event("ga4w:ready"));
+//# sourceURL=woocommerce-google-analytics-integration-data-js-after
+</script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://ehs.stanford.edu/wp-includes/js/wp-emoji-release.min.js?ver=7.0.2"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://ehs.stanford.edu/wp-includes/js/wp-emoji-loader.min.js
+</script>
+
+
+	<footer class="site-footer" role="contentinfo">
+		<div class="footer-nav">
+			<div class="container">
+				<div class="l-1up">
+					<div class="footer-col footer-col--first">
+						<h4 class="footer-nav__title">Program Areas</h4>
+						<ul class="menu footer-nav__list">
+							<!--li class="menu__item is-leaf leaf"><a class="menu__link" href="../../about-us.html">About EH&amp;S</a></li>
+							<li class="menu__item is-leaf leaf"><a class="menu__link" href="/ehs-staff-resources">About EH&amp;S (for Staff)</a></li-->
+
+							<li class="menu__item is-leaf leaf"><a class="menu__link" href="../biosafety-biosecurity.html" target="_blank">Biosafety & Biosecurity</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="https://cardinalready.stanford.edu/" target="_blank">Emergency Management</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../about-us/environmental-protection.html" target="_blank">Environmental Protection</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../fire-safety.html" target="_blank">Fire Marshal's Office</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../radiation-safety.html" target="_blank">Health Physics</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../lab-safety.html" target="_blank">Laboratory Safety</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="https://suohc.stanford.edu/" target="_blank">Occupational Health Center</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../about-us/occupational-safety-health.html" target="_blank">Occupational Safety & Health</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../about-us/training-communications.html">Training & Communications</a></li>
+						</ul>
+					</div>
+					<div class="footer-col footer-col--second">
+						<h4 class="footer-nav__title">Roles</h4>
+
+							<ul class="menu footer-nav__list">
+
+								<li class="menu__item is-leaf leaf"><a class="menu__link" href="../../role/building-managers.html">Building Managers</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../role/construction-managers.html">Construction Managers</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../role/external-contractors.html">External Contractors</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../role/hr-managers.html">HR Managers</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../role/lab-managers.html">Lab Managers</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../role/lab-researchers.html">Lab Researchers</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../role/lab-safety-coordinators.html">Lab Safety Coordinators</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../role/office-workers.html">Office Workers</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../role/parents-families.html">Parents and Families</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../role/principal-investigators.html">Principal Investigators</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../role/shops-workers.html">Shops Workers</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../role/supervisorsmanagers.html">Supervisors/Managers</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../role/university-safety-partners.html">University Safety Partners</a></li>
+							</ul>
+
+					</div>
+					<div class="footer-col footer-col--third">
+						<h4 class="footer-nav__title">Topics</h4>
+						<div class="menu-block-wrapper menu-block-2 menu-name-menu-topics parent-mlid-0 menu-level-1">
+							<ul class="menu footer-nav__list">
+
+								<li class="menu__item is-leaf leaf"><a class="menu__link" href="../animal-safety.html">Animal Research Occupational Health and Safety Program</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../biosafety-biosecurity.html">Biosafety & Biosecurity</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../campus-safety.html">Campus Safety</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../chemical-safety.html">Chemical Safety</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../construction-maintenance.html">Construction and Maintenance</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../ecosustainable-practices.html">Eco/Sustainable Practices</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../emergency-preparedness.html">Emergency Preparedness</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../ergonomics.html">Ergonomics</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../field-research-safety.html">Field  Safety</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../general-workplace-safety.html">General Workplace Safety</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../hazardous-materials.html">Hazardous Materials</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../healthy-buildings.html">Healthy Buildings</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../institutional-biosafety-committee-ibc.html">Institutional Biosafety Committee (IBC)</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../lab-safety.html">Lab Safety</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../lab-setup-shutdown.html">Lab Setup and Shutdown</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../laser-safety.html">Laser Safety</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="https://suohc.stanford.edu/">Occupational Health Center</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../occupational-injury-illness.html">Occupational Injury and Illness</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../radiation-safety.html">Radiation Safety</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../respiratory-illness-policies.html">Respiratory Illness Policies</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../safetysync.html">SafetySync</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../shop-makerspace-safety.html">Shop / Makerspace Safety</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../fire-safety.html">Stanford University Fire Marshal’s Office (SUFMO)</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../waste-disposal.html">Waste Disposal</a></li>
+							</ul>
+
+						</div>
+					</div>
+					<div class="footer-col footer-col--fourth">
+						<h4 class="footer-nav__title">Quick Links</h4>
+
+						<ul class="menu footer-nav__list"><li class="menu__item is-leaf leaf"><a class="menu__link" href="https://su17.stanford.edu/" onclick="ga('send','event','Quick Links','Report an Incident (SU-17)', this.href);">Report an Incident (SU-17)</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../respiratory-illness-policies.html" onclick="ga('send','event','Quick Links','COVID-19 Information', this.href);">COVID-19 Information</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="https://suohc.stanford.edu/" onclick="ga('send','event','Quick Links','Occupational Health Center', this.href);">Occupational Health Center</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../about-us.html" onclick="ga('send','event','Quick Links','About Us', this.href);">About Us</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="https://stanford.bioraft.com/" onclick="ga('send','event','Quick Links','BioRAFT', this.href);">BioRAFT</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="https://chemtracker.stanford.edu/v4" onclick="ga('send','event','Quick Links','Chemical Inventory System', this.href);">Chemical Inventory System</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../staff.html" onclick="ga('send','event','Quick Links','Find an EH&S Specialist', this.href);">Find an EH&S Specialist</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../reference29b4.html?types=lesson%20learned" onclick="ga('send','event','Quick Links','Lessons Learned', this.href);">Lessons Learned</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../waste-streams.html" onclick="ga('send','event','Quick Links','Recycling and Disposal Guide', this.href);">Recycling and Disposal Guide</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../training.html" onclick="ga('send','event','Quick Links','Register for Training', this.href);">Register for Training</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../services.html" onclick="ga('send','event','Quick Links','Request Services', this.href);">Request Services</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="https://ofweb.stanford.edu/apex/f?p=206" onclick="ga('send','event','Quick Links','Submit Work Request', this.href);">Submit Work Request</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="https://wastetag.stanford.edu/" onclick="ga('send','event','Quick Links','Waste Tag', this.href);">Waste Tag</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../services/weather-conditions.html" onclick="ga('send','event','Quick Links','Waste Tag', this.href);">Weather Conditions</a></li><li class="menu__item is-leaf leaf"><a class="menu__link" href="../../safety-store.html">Safety Store</a></li></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-contact">
+			<div class="container">
+				<div class="l-1up">
+					<div class="footer-contact__left">
+						<img class="footer-contact__logo" src="../../wp-content/themes/suehs/assets/images/logo--stanford.svg" alt="Stanford EH&amp;S" title="Home">
+						<span class="footer-contact__address">484 Oak Road, Stanford, CA 94305-8007<br />Phone: <a href="tel:+16507230448">650-723-0448</a></span>
+					</div>
+					<div class="footer-contact__right">
+						<p><a class="button button--light" href="https://www.google.com/maps/dir//484+Oak+Rd,+Stanford,+CA+94305/@37.4294659,-122.186538,17z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x808fa4d0c1d7a649:0x76df8e9a35c10524!2m2!1d-122.184344!2d37.4294659">Directions</a> <a class="button button--light" href="https://careersearch.stanford.edu/">Careers</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	</div>
+	</div>
+	
+	<div id="global-footer">
+		<div class="container">
+			<div class="row">
+				<div id="bottom-logo" class="span2">
+					<a href="https://www.stanford.edu/">
+						<img src="https://www.stanford.edu/su-identity/images/footer-stanford-logo@2x.png" alt="Stanford University" width="105" height="49">
+					</a>
+				</div>
+				<div id="bottom-text" class="span10">
+					<ul class="menu"><li class="menu__item is-leaf first leaf"><a href="https://www.stanford.edu/" class="menu__link">SU Home</a></li>
+						<li class="menu__item is-leaf leaf"><a href="https://visit.stanford.edu/plan/" class="menu__link">Maps &amp; Directions</a></li>
+						<li class="menu__item is-leaf leaf"><a href="https://www.stanford.edu/search/" class="menu__link">Search Stanford</a></li>
+						<li class="menu__item is-leaf leaf"><a href="https://www.stanford.edu/site/terms/" class="menu__link">Terms of Use</a></li>
+						<li class="menu__item is-leaf last leaf"><a href="https://emergency.stanford.edu/" class="menu__link">Emergency Info</a></li>
+						<li class="menu__item is-leaf last leaf"><a href="https://www.stanford.edu/site/privacy/" class="menu__link">Privacy</a></li>
+					</ul>
+				</div>
+				<div class="clear"></div>
+				<p class="copyright vcard" style="margin-top: -50px;">© <span class="fn org">Stanford University</span>, <span class="adr"> <span class="locality">Stanford</span>, <span class="region">California</span> <span class="postal-code">94305</span></span>.&nbsp;&nbsp;
+					<span id="copyright-complaint"><a href="https://uit.stanford.edu/security/copyright-infringement" class="copyright-complaint">Copyright Complaints</a></span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<a href="#" class="button cd-top"><i class="fa fa-chevron-up"></i> <span class="element-invisible">Back to Top</span></a>
+
+
+
+
+
+
+
+
+
+	<!-- Welcome modal -->
+	<div class="la-details-modal">
+		<div class="la-details-modal-close">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 14 14" fill="none">
+				<path fill-rule="evenodd" clip-rule="evenodd" d="M13.7071 1.70711C14.0976 1.31658 14.0976 0.683417 13.7071 0.292893C13.3166 -0.0976311 12.6834 -0.0976311 12.2929 0.292893L7 5.58579L1.70711 0.292893C1.31658 -0.0976311 0.683417 -0.0976311 0.292893 0.292893C-0.0976311 0.683417 -0.0976311 1.31658 0.292893 1.70711L5.58579 7L0.292893 12.2929C-0.0976311 12.6834 -0.0976311 13.3166 0.292893 13.7071C0.683417 14.0976 1.31658 14.0976 1.70711 13.7071L7 8.41421L12.2929 13.7071C12.6834 14.0976 13.3166 14.0976 13.7071 13.7071C14.0976 13.3166 14.0976 12.6834 13.7071 12.2929L8.41421 7L13.7071 1.70711Z" fill="black" />
+			</svg>
+		</div>
+		<div class="color-stripe-top"></div>
+		<div class="la-details-modal-title">
+			<!--img src="/wp-content/uploads/dan2.png"></img-->
+			<h1></h1>
+			<span class="download-container"><span style="vertical-align: super; font-size: 14px; margin-left: 3em; font-style: italic;">Download full instructions here -></span> <a href="#" target="_blank"><i class="fa fa-download" aria-hidden="true" style="font-size: 30px; margin-top: 0.4em; margin-left: 0.2em;" title="Download detailed instructions"></i></a><span>
+		</div>
+		<div class="la-details-modal-content">
+			<!--div class="space"></div-->
+			<div id="modal-content"></div>
+		</div>
+	</div>
+	<div class="la-details-modal-overlay"></div>
+
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-TLEDRW0KHT"></script>
+	<script type="text/javascript">
+		var host = window.location.hostname;
+		if (host.indexOf('ehs.stanford.edu') > -1) {
+			// Enable Raygun for prod
+			rg4js('apiKey', 'DJvIHvRtr4L8lx2EPbpDw');
+			rg4js('enableCrashReporting', true);
+			rg4js('enablePulse', false);
+			rg4js('logContentsOfXhrCalls', true); // Include body contents of XHR requests/responses as Breadcrumb metadata
+			
+			// Enable GA4
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-TLEDRW0KHT');
+		} else if (host.indexOf('ehs-dev.stanford.edu') > -1) {
+			// Enable Raygun for dev
+			rg4js('apiKey', 'Cu4U9ooQ0arBMlfvxFUMQ');
+			rg4js('enableCrashReporting', true);
+			rg4js('enablePulse', false);
+			rg4js('logContentsOfXhrCalls', true); // Include body contents of XHR requests/responses as Breadcrumb metadata
+		};
+	</script>
+
+	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"820859c140","applicationID":"93672174","transactionName":"MQcDNUZRX0NTUkBfXAhNIAJAWV5eHUJdWFQKB0wVW0BYUw==","queueTime":0,"applicationTime":1766,"atts":"HUAAQw5LTE0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+	
+</html>

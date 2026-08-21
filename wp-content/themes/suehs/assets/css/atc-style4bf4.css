@@ -1,0 +1,89 @@
+/**
+ * AddToCalendar Base CSS
+ * http://addtocalendar.com
+ */
+
+/* Base */
+
+.addtocalendar var {
+  display: none;
+}
+
+.addtocalendar {
+  position: relative;
+  display: inline-block;
+  background: transparent !important;
+  margin-bottom: 1em;
+}
+
+.atcb-link {
+  display: block;
+  outline: none !important;
+  cursor: pointer;
+  background-color: #007c94;
+  border: 1px solid #007c94;
+  color: #ffffff;
+  line-height: 1.25em;
+  padding: 0.4em 0.8em;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 5px 0 5px 0;
+  font-size: 0.8em;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  vertical-align: middle;
+}
+
+.atcb-link:focus ~ ul,
+.atcb-link:active ~ ul,
+.atcb-list:hover {
+  visibility: visible;
+}
+
+.atcb-link:hover {
+  background-color: #00677b;
+  border-color: #00677b;
+  color: #ffffff;
+}
+
+.atcb-list {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 128px;
+  z-index: 900;
+  list-style-type: none;
+  text-align: center;
+  background: #f8f5f3;
+  font-size: 0.8em;
+}
+
+.atcb-list,
+.atcb-item {
+  padding: 5px;
+}
+
+.atcb-item {
+  float: none;
+  text-align: center;
+}
+
+.atcb-item-link {
+  text-decoration: none;
+  outline: none;
+  display: block;
+}
+
+.atcb-item.hover,
+.atcb-item:hover {
+  position: relative;
+  z-index: 900;
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+}

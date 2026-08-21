@@ -1,0 +1,42 @@
+/**
+ * CSS File for the weather and AQI widget
+ */
+.weather-widget-container h3 {
+	text-align: center;
+}
+
+.weather-widget-container {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #f1e8e3;
+	width: 26em;
+	padding: 0 1em;
+	border-radius: 10px;
+	margin-bottom: 2em;
+}
+
+.weather-widget-footer {
+	font-size: 11px;
+	font-style: italic;
+	text-align: center;
+}
+
+.weather-widget-table {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.weather-widget-table p {
+	width: 50%;
+	text-align: center;
+}
+
+.weather-widget-aqi-desc::before {
+	content: open-quote;
+}
+
+.weather-widget-aqi-desc::after {
+	content: close-quote;
+}
