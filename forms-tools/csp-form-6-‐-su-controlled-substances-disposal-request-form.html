@@ -146,13 +146,6 @@ var IZ = {"options":{"lensShape":"square","lensSize":200,"lensBorderSize":1,"len
 
   <meta name="eip" value="false">
 
-<script type="text/javascript">
-  !function(a,b,c,d,e,f,g,h){a.RaygunObject=e,a[e]=a[e]||function(){
-  (a[e].o=a[e].o||[]).push(arguments)},f=b.createElement(c),g=b.getElementsByTagName(c)[0],
-  f.async=1,f.src=d,g.parentNode.insertBefore(f,g),h=a.onerror,a.onerror=function(b,c,d,f,g){
-  h&&h(b,c,d,f,g),g||(g=new Error(b)),a[e].q=a[e].q||[],a[e].q.push({
-  e:g})}}(window,document,"script","http://cdn.raygun.io/raygun4js/raygun.min.js","rg4js");
-</script>
 
 <script src="../wp-content/themes/suehs/assets/js/moment.min.js"></script>
 
@@ -650,28 +643,7 @@ const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(
 
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-TLEDRW0KHT"></script>
-	<script type="text/javascript">
-		var host = window.location.hostname;
-		if (host.indexOf('ehs.stanford.edu') > -1) {
-			// Enable Raygun for prod
-			rg4js('apiKey', 'DJvIHvRtr4L8lx2EPbpDw');
-			rg4js('enableCrashReporting', true);
-			rg4js('enablePulse', false);
-			rg4js('logContentsOfXhrCalls', true); // Include body contents of XHR requests/responses as Breadcrumb metadata
-			
-			// Enable GA4
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-			gtag('config', 'G-TLEDRW0KHT');
-		} else if (host.indexOf('ehs-dev.stanford.edu') > -1) {
-			// Enable Raygun for dev
-			rg4js('apiKey', 'Cu4U9ooQ0arBMlfvxFUMQ');
-			rg4js('enableCrashReporting', true);
-			rg4js('enablePulse', false);
-			rg4js('logContentsOfXhrCalls', true); // Include body contents of XHR requests/responses as Breadcrumb metadata
-		};
-	</script>
+
 
 	<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"820859c140","applicationID":"93672174","transactionName":"MQcDNUZRX0NTUkBfXAhNIAJAWV5eHUJdWFQKB0wHW0JcQx9FW1lfFQ==","queueTime":0,"applicationTime":1068,"atts":"HUAAQw5LTE0=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 	
