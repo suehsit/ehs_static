@@ -2545,3 +2545,11 @@ p a:hover:before, p a:hover:focus {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
 }*/
+/* Stanford brand bar background.
+   The official su-identity.css is linked over http, which an https host blocks
+   as mixed content — taking the bar's red background with it and leaving the
+   white wordmark on white. Set the colour locally so the bar renders on its
+   own. Size, spacing and the logo are untouched. */
+#brandbar {
+    background-color: #8c1515;
+}
