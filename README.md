@@ -65,7 +65,7 @@ Every page answers its original extensionless WordPress URL. GitHub Pages resolv
 ### Markup is clean
 
 - **6,016** stray `</p>` tags removed (each was rendering as an empty paragraph)
-- **0** stray or unclosed tags across all 1,948 pages
+- **0** stray or unclosed tags across every page in the archive
 - **0** HTTrack comments, scaffolding or artefacts remaining
 
 ### Security issues resolved
@@ -100,23 +100,36 @@ Following the wording EH&S already used elsewhere on the site for disabled forms
 
 ### Content gaps
 
-**710 detail pages are missing** — the largest single gap in the archive, and the one thing here that cannot be fixed by editing files.
+**636 detail pages are missing** — the largest single gap in the archive.
 
 | Section | Present | Referenced | Missing |
 |---|---|---|---|
 | `/manual` + sections | 36 | 370 | **334** |
 | `/reference` | 41 | 163 | **122** |
-| `/forms-tools` | 79 | 159 | **80** |
+| `/forms-tools` | 159 | 159 | **0** |
 | `/news` | 4 | 64 | **60** |
 | `/training` | 17 | 71 | **54** |
 | `/services` | 16 | 46 | **30** |
 | `/learning-library` | 5 | 35 | **30** |
 
+`/forms-tools` is now complete. The 74 pages the crawl never reached were rebuilt from the
+Pantheon database backup of 14 September 2026 — real titles, bodies and `how_to_use` text from
+`wp_posts`/`wp_postmeta`, not catalogue stubs — and the 60 documents they link to were recovered
+from the same backup's files export. The renderer was checked by regenerating the 79 pages that
+*were* captured and diffing: 68 reproduce byte-for-byte, the rest differ only where the archive's
+own link-fixing passes had already changed them.
+
+One substitution was made. The four LAOHP animal-allergy posters are 161 MB of un-optimised print
+PDFs — 97 MB for the mouse poster alone, more than a quarter of the whole site for a single page.
+They link instead to the 1088×1408 JPG renders WordPress had already generated, 1.4 MB for all
+four. The posters remain viewable; what is lost is print resolution. If EH&S re-exports them at a
+sane file size, swapping the links back is a one-line change per poster.
+
 The cause is the same blind spot described above, one layer up. HTTrack finds pages by following links in the HTML. These detail pages were only ever linked from JavaScript-generated result lists, so the crawler never saw them and never fetched them. The tell: 19 of 20 sampled reference pages that *are* present are also linked by an ordinary href somewhere else in the site — which is how they got captured.
 
-The landing-page catalogues hold each item's title, teaser, type and topic tags, but not its body text, so **the content is not recoverable from anything on disk.** `MISSING-PAGES.md` lists all 710 with titles and paths.
+The landing-page catalogues hold each item's title, teaser, type and topic tags, but not its body text, so **the content is not recoverable from the crawl alone.** `MISSING-PAGES.md` lists them with titles and paths.
 
-If `ehs.stanford.edu` still answers, re-crawling from that list closes the gap in an hour or two and is worth trying first, because it either works or rules itself out immediately. Failing that, the catalogue metadata is enough to generate stub pages that keep the teasers and stop the 404s. `STATIC-HOSTING-AUDIT.md` §4d lays out the options.
+It *is* recoverable from the Pantheon backup, which carries the full `wp_posts` and `wp_postmeta` tables plus every uploaded file. That is how `/forms-tools` was closed, and the same approach applies to the six sections still listed above. Failing that, the catalogue metadata is enough to generate stub pages that keep the teasers and stop the 404s. `STATIC-HOSTING-AUDIT.md` §4d lays out the options.
 
 Smaller gaps, all from crawl errors:
 
