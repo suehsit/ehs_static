@@ -125,6 +125,13 @@ They link instead to the 1088×1408 JPG renders WordPress had already generated,
 four. The posters remain viewable; what is lost is print resolution. If EH&S re-exports them at a
 sane file size, swapping the links back is a one-line change per poster.
 
+Three Laser Safety pages embedded a Ninja Forms webform, which no static host can run. All three
+now carry the disabled-form wording and route to `ehswebteam@lists.stanford.edu`. One of them,
+`laser-registration-form`, was already in the archive and had been displaying the raw
+`[ninja_form id=4]` shortcode to visitors since the crawl; no unrendered shortcode remains
+anywhere in the archive. The Healthcare Worker Medical Surveillance Fee Schedule — a placeholder
+since December 2022 — was repointed to the same address at EH&S's request.
+
 The cause is the same blind spot described above, one layer up. HTTrack finds pages by following links in the HTML. These detail pages were only ever linked from JavaScript-generated result lists, so the crawler never saw them and never fetched them. The tell: 19 of 20 sampled reference pages that *are* present are also linked by an ordinary href somewhere else in the site — which is how they got captured.
 
 The landing-page catalogues hold each item's title, teaser, type and topic tags, but not its body text, so **the content is not recoverable from the crawl alone.** `MISSING-PAGES.md` lists them with titles and paths.
